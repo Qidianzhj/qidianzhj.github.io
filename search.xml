@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>github图片不显示</title>
+      <link href="2021/01/17/github-tu-pian/"/>
+      <url>2021/01/17/github-tu-pian/</url>
+      
+        <content type="html"><![CDATA[<h1 id="github图片不显示问题："><a href="#github图片不显示问题：" class="headerlink" title="github图片不显示问题："></a>github图片不显示问题：</h1><p>C:\Windows\System32\drivers\etc\hosts:</p><p>修改权限</p><p>末行加入：<br>140.82.114.4    github.com </p><p>140.82.113.3    gist.github.com</p><p>199.232.28.133    assets-cdn.github.com</p><p>199.232.28.133    raw.githubusercontent.com</p><p>199.232.28.133    gist.githubusercontent.com</p><p>199.232.28.133    cloud.githubusercontent.com</p><p>199.232.28.133    camo.githubusercontent.com</p><p>199.232.28.133    avatars0.githubusercontent.com</p><p>199.232.28.133    avatars1.githubusercontent.com</p><p>199.232.28.133    avatars2.githubusercontent.com</p><p>199.232.28.133    avatars3.githubusercontent.com</p><p>199.232.28.133    avatars4.githubusercontent.com</p><p>199.232.28.133    avatars5.githubusercontent.com</p><p>199.232.28.133    avatars6.githubusercontent.com</p><p>199.232.28.133    avatars7.githubusercontent.com</p><p>199.232.28.133    avatars8.githubusercontent.com</p><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="2021/01/11/hello-world/"/>
       <url>2021/01/11/hello-world/</url>
