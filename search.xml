@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>123</title>
+      <link href="2021/04/06/123/"/>
+      <url>2021/04/06/123/</url>
+      
+        <content type="html"><![CDATA[<p>开始</p><p><img src="/2021/04/06/123/Image.png" alt="123"></p><p>结束</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> try </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tryFirst</title>
+      <link href="2021/04/06/tryfirst/"/>
+      <url>2021/04/06/tryfirst/</url>
+      
+        <content type="html"><![CDATA[<p>放大</p><p><img src="/2021/04/06/tryfirst/myBlog\myblog\HanBlog\source_posts\photo\Image.png" alt="123"></p><p>环境</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> try </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>github图片不显示</title>
       <link href="2021/01/17/github-tu-pian/"/>
       <url>2021/01/17/github-tu-pian/</url>
@@ -58,34 +96,9 @@
       <link href="2021/01/11/hello-world/"/>
       <url>2021/01/11/hello-world/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
       
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>linux——虚拟机安装</title>
-      <link href="2021/01/01/linux-xu-ni-ji/"/>
-      <url>2021/01/01/linux-xu-ni-ji/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Ubuntu-16-04-安装："><a href="#Ubuntu-16-04-安装：" class="headerlink" title="Ubuntu 16.04 安装："></a>Ubuntu 16.04 安装：</h1><p><a href="http://www.baidu.com/" title="百度">http://www.baidu.com</a></p><p><em><a href="https://blog.csdn.net/kellyroslyn/article/details/91607520">https://blog.csdn.net/kellyroslyn/article/details/91607520</a></em><br>界面显示不全， 左手按住alt键右手鼠标往上拖动安装界面，即可显示完全内容</p><h1 id="vmware-Tools-安装："><a href="#vmware-Tools-安装：" class="headerlink" title="vmware Tools 安装："></a>vmware Tools 安装：</h1><p><a href="https://blog.csdn.net/weixin_37182342/article/details/80236632?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task">https://blog.csdn.net/weixin_37182342/article/details/80236632?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task</a> </p><h2 id="桥接模式设置，解决连不上网的问题"><a href="#桥接模式设置，解决连不上网的问题" class="headerlink" title="桥接模式设置，解决连不上网的问题"></a>桥接模式设置，解决连不上网的问题</h2><ol><li><a href="https://blog.csdn.net/Mr_jianfeng/article/details/81053849/">https://blog.csdn.net/Mr_jianfeng/article/details/81053849/</a><h2 id="安装谷歌中文输入法："><a href="#安装谷歌中文输入法：" class="headerlink" title="安装谷歌中文输入法："></a>安装谷歌中文输入法：</h2></li><li><a href="https://blog.csdn.net/lybhit/article/details/78663731">https://blog.csdn.net/lybhit/article/details/78663731</a></li><li>mqtt</li><li><a href="https://blog.csdn.net/jsjwr/article/details/78800202">https://blog.csdn.net/jsjwr/article/details/78800202</a></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 虚拟机 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> linux </tag>
-            
-        </tags>
       
     </entry>
     
@@ -96,7 +109,7 @@
       <link href="2021/01/01/pcb/"/>
       <url>2021/01/01/pcb/</url>
       
-        <content type="html"><![CDATA[<h1 id="绘制PCB-library-模型原件库-和Schematic-library（原理图原件库）"><a href="#绘制PCB-library-模型原件库-和Schematic-library（原理图原件库）" class="headerlink" title="绘制PCB_library(模型原件库)和Schematic_library（原理图原件库）"></a>绘制PCB_library(模型原件库)和Schematic_library（原理图原件库）</h1><p>原件资源上网可查<br>pcb模型原件： 3D CAD 模型、2D  (注意要选step文件)<br>或者导入proe自己制作的模型，place-&gt;3d body  -&gt;properties-&gt;generic-&gt;choose<br><img src="http://n.sinaimg.cn/sinacn10112/566/w1018h1148/20191111/fd6e-iieqapt6530904.jpg" alt="avatar"></p><p><img src="https://raw.githubusercontent.com/Qidianzhj/qidianzhj.github.io/master/medias/banner/0.jpg"><br>制作原理图时，要注意引脚的接线端在外面：</p><p>绘制工具栏可在view-&gt;roolbar里找。</p><h1 id="现实制作："><a href="#现实制作：" class="headerlink" title="现实制作："></a>现实制作：</h1><p>①,new -&gt; project-&gt; pcb project<br>②, 项目处右键-&gt;add existing to project..    向项目导入自己的pcb_library和schematic_library<br>③，项目处右键_&gt;add new to project-&gt;  pcb  或 schematic<br>④，首先绘制原理图，右下角panel（面板）-&gt;components（在里面选择schematic库的原件）<br>注意绘制工具栏的placeware(原件之间的线)  和place line（边框等）</p><h2 id="两端输入输出连接器注意："><a href="#两端输入输出连接器注意：" class="headerlink" title="两端输入输出连接器注意："></a>两端输入输出连接器注意：</h2><p>原理图绘制完毕，双击原件，给每个原件添加模型（先删除默认的仿生模型）</p><h1 id="给原件加编号："><a href="#给原件加编号：" class="headerlink" title="给原件加编号："></a>给原件加编号：</h1><p>点击右下角accept changes</p><p>⑤，给每个原件添加指定的PCB封装模型，并删除之前的封装。</p><p>⑥，导出原理图至PCB<br>design-&gt;import changes from …<br>去除相关干扰：  选中  -&gt;右键  -&gt;find similar object-&gt;</p><p>隐藏GUN线，方便布线，GUN线最后铺铜皮的时候做<br>view-&gt;connectoins-&gt;hide net  左键选中GUN</p><p>按照原理图摆放原件，注意根据电流大小，设计线的粗细</p><p>加板：<br>在keepout层  设计：</p><p>画出闭合的框，左键选中，右键find similar object，   design-&gt; board shape -&gt;define from select objects  </p><h1 id="设计规则："><a href="#设计规则：" class="headerlink" title="设计规则："></a>设计规则：</h1><p>design-&gt; rules-&gt;<br>间隙：</p><p>线宽：</p><p>过孔大小：</p><p>铺铜皮：<br>给原件加绝缘层</p><p>其余（过孔）：</p><p>布线：</p><p>右键点中原件，shift+空格调整，右键点中另一原件（tab 暂停 可设置属性）。<br>不好连的线可选择打过孔的方式通过bottom走线。<br>例如：<br>place -&gt; via  在top层选择打孔<br>到 bottom 层连线。</p><p>再次加框，使其完整干净。</p><h1 id="设置GUN，铺铜皮"><a href="#设置GUN，铺铜皮" class="headerlink" title="设置GUN，铺铜皮"></a>设置GUN，铺铜皮</h1><p>view-&gt; connections-&gt;show net  -&gt; 左键GUN    显示与GUN的连线。</p><p>place -&gt;polygon pour..-&gt;左键依次选中框的四个角（shift   空格 设置为直角） -&gt;tab _&gt;设置top层 GUN的net网络铺铜皮，加绝缘层（铜皮容易散热，绝缘层就是没有铜皮，保温）</p><p>在给bottom层铺铜皮，同上。</p><p>为了更好的利用剩余的大面积铜皮，我们可以多打几个过孔来增强它的电流通道的强度，使其可以承受更强的电流。打完孔之后，要重新铺铜皮。</p><p>保存，可通过file -&gt;export-&gt;steop3D   step导出，proe打开设计<br>或  pdf 3D pdf导出。</p><h1 id="快捷键："><a href="#快捷键：" class="headerlink" title="快捷键："></a>快捷键：</h1><p>shift 空格 ：  切换模式；<br>左键选中  空格  ：旋转<br>q：英制mill 和公制 mm 切换<br>g： 画板最小移动单位。</p><p>   <code>还好吧国际化</code></p>]]></content>
+        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="842ff83506f3fecd62835468f48e832e29cdf2eaa96e14d5a86d554fa0cd47a1">4630436162ade97ba2718b7d0c4b3b63cb3a3f659c5ca08b4bca0f5845928186cd16733ce7ca3c7ffd6737acdff63eb681f91b474c94cda8a11a278ab46af755ff8b3c164707f2b989e46c1f10cb9a2e836cd4b7e02724f4d292ddf0300928961d7bc59cd77dc3f473eaef0035b8cfe3d6e83fe51bc98e719423d1bbc562f60a3e5501b2090f6223659ee2e49a22c091e39355bee207eb8898a102712d587d3475368579849fedaf3faf5295cc533c9e2054f0704035110a05b04bfd87e068e72b194b8e8656a96afdfbfa6c6917b9b2a9f0328d7eadde2485e8093f5e656c8f796466395a890e4b4efb77157e84dd88847dc6f1e6c1310f0c181f292fd1d29aceb6feeb86d5c57251b03264e1f62300b4785dbda5ba6690287f2e31122eec8dab7494b1878293fd1ba757408f653471cfdfe347e98576a79dc488db3961d06f96c95cbc99781083317d4b21221fa5e4f701fe96efee7e90d8a79a03172faa4e070cc9a2981c8be839bf63233a2fd921f744f79a23b9515dc1f8a7f8777760a8c5e960fca7d22054c548b2327594c29ff55dde323259c3c59dca1f40eab77a511f852c1cbc5c056d78628b80d7be7b7f4e2bd6f94a5819a788f9f2e8cd5e4466ffa58b1823c295861601db52d06b4b051cb3118f3d09e446e87462b6639a512e3b2b356c46255c1b95f82aafabb6c39a6a3f65570ed8a8aae92f4914df9da19b97d612aa620a0a871abe76a701a3e9ebcfe1bd1cb49a5f4b1404ae610ba50ada3ebd6139965d49184853f7eadc11729b68ea9e3acce45a296d8d878b3227bfbf715080e65bf208ef6e056635f7519321c0c6f757cb59a5b30040e78f8d0520deab9630153ece3741d8791491c1f4cf762722179e3f43328b6e88d55b59b5da22b3b968a2dd0d866976ca9532ce4f502697546541e64a1369bf850db97564d3228523bd97c9585ee0af98697475330f229d2c32aeb6de2fc678928013e2dfffa4d0e45520cefc8c466dbb0ebb6566806cc043bfd973ec745565e8fe0895629c90317e808dbbdeb11c79c9841a2b7b9321ed451f4618d5f82b4bd97630b603985f3348b72b488e477e0b2f11fdba2db9819396dc4e03346879724084e8427cff110ebd9394c2830fb1a17298b8240dce7ea6d995e44afe80ce35ab0ea1e858443b1b86f5e4c61dc992bea78c47660637143a55380a0972b1a1c744ac475f00065000cd32e4e67a826bb4a125851cf739e10ba2ab55e2f6e2a318a1ff77ceb14e8a09cebf48001dba3aadb9fec454186d7ca2026e620becdde9e7fe33d900f4008f80871ad2f9917e4e4322af985162b4e8fc1704accbc4cc8d4d019da45385df2e33b4720863852be7dad27cdd48d22493ecd40364d533887e62e4254123626770370ba9b25cb85e72db36edada1a8479493df3be950a43fb348a356e65c9a10dc4cf91f0077d38284e1cc765404e79bbe031261e9ba1aee2ff507a3f56b3dd6d6d6c3cee3b0a65b2205f764cdd30145bf7393e3ab19f4b941d3c080670218ff43d65069c1112be826cdf9ab33f31756aaf16b23e97ecfc11e5ace86962d22648711aec4b855f2fbd59b899dbc5a9f454ee23c68b51f6d3ab1056fb5defd2b7aaa11b8cef1ace84983afc384a8eae10370e752709101257a56f0f09e2a2a1d82a066b857a6f0f85de27b1a3bbd7b678f439e3752999dc9005daca4f650b0960ac647d83d30030f8f2d081847bcb9cc7c879816dd2c87afe9c5df0ec16fa1a40f70f6e0bcb8f4ffd915a56d76bb62a8c07dfbb6aa01fa613ee46bdc1a1ce0b77681be208b2cb0ad1196577879e328dc672d114fd84c75d8d72354166dce22c3b520ad284aea24317d92cb05a3ea5c679300e81730166b216c5691dfc5c610c2a4b1090881f65d0cd3fa80df5ab8a8e2628f330110d2b5a781ae01fe0d85b558dfc34b0c9425efbe1eb7733d2c93b025241bb604468a76423c70f9cac19a698f1358e52b4aba704159aadd69b3629de7ff017e410a34cc978ebc686b10eafaa7635367e3a4b38c6e11b62b2fcc54e84771111533727caffab75784af26dfab0822875e5d104e9fbe4a00adac1e63ccddebb663b924d06c509cce6bf3add050952b44b63e4c528ec70104a9b50e753aa6ce13cf097fd07f5e12fbe24d01fa67d0ed40f99573442b377339eba356e0450ab2a98f06cf163c0aee376ae5931ffeb7ad9d98d0c140f1503fc386b23be080e9ec34a0a6cad12ee511ab22eaa213666feaa935e13d671fe43b3503d30ed3decf263569398cd06f63ba61c5f7965bcb4ab0f76a81b4cc6a310d5a9199657746bb1ab3f084f5ce039da4969190aff3fd6c9c76220fb723cb65d7b7d25253880f15dbf2fe1db872ab7c19be81e91856d2c354fc2d3a925067aa1499fd4fc8ee87ca3ed015c81539764f385a283ed1ccc5ed11ec924c86d9ad1ba60080b595853a677bd7cb69d13113d2837198e05a9789be2918923fbbd251cb2720293783f1c7188afabcff2c048747e5a944580efa9813f4f5898b926136b669919919b2d6571ac2daf93c9facd0cb7a2bd2c92ff31a524f6852791517ad2a8652742cb94c384b3d65424a9b606a1e1631f31e38a02085644b594403ac2614ac43b47cecf9846de9ba21fce0e906079635bb3a2c4ce3bac648bf65e62312f4f58ac391a00a0c0e758f6ad5cd445fd8c91ec42df219ecc4f6de6bae1eae755abcfff1e1f292e4e811a0529f8267c783de0b92a74a869a9cfc6ceb22baf629afe9e4194a6f51e14c552375333474b9137761609f7d80db3ac95bd620285f59da43467306ddc313580d5542f361f188cd49ce0fbfc5b0f01fe43dc3581aa8f119934b540fb6c739d5ae82294df29ee04530d669c458ca792f1fcb8a738a0f6654d7cc87710fc18b3b46982fe5cd4fdcda9cd4acd2ed85444ed693268e9163fd90b3fabe15b0a95ab6f48f950331c1fd285cb30d551a2b08378daa2b49b6724ce736b278ab84490c4e2db785cce18709ba2ac9e9ca9b777a30b1b9fb72882c8310d14bc6df626102b727e7eda0b38fd6a3c43a4b15bd5ef9e179ec95a849a3a85d67e391a427bdb5cf4a8791232e38b9a5103fc6bce91579150b178b14572bbd6cd3db27b6a0b2e8275ad1ff85d3590d22052a29a631e48c168ec97b26c231d8c3f10e244fbd3fb88a1e4bcb0b15a5cc752f3c7a1bb457f3a85c3d0e7e686afe135154f7bc10d3aeb7081f6762660220a9cf496a104b5815175d3d1910c4899bbb199ed84f4cc0161e50ef36e806beaa79c1bf1e91e844d383d20d5bcf7abd25f05b09ea3924b19fc1ee843d31d935d3b74087d118654a5edc8d42261b870154d4a772a87e35daa3fabed0992e44774e7681d391281c58b0da0b8d2d37f7bef673f70efcb3218a3fd287c715e79fed58d9f48f6f43989d9a150494fbb60c535e0b0578cc21279d834e0daae8eca6af2ff3ab3c4e15a141ab5752c18219e0ad58e1dfc9f0ce4cebc0a9656da0145c15cf2fe6ac2ef6d3d074e7cd800ffe759baa0d7b63b2ed0b2098d93f574edd36526b139992a9819a6962acd3d48af6d5928d1dbcc483a4520ef8403ea329b5b1d1f70c084af1c2b20ea15e65b7dc8773fde238c7fadf3233237b2bf14c6a9861fae31df06246493bab4a3dad1b8d65e9daf8a571949b0d5f961988237c8bff37988c6a065ed71753aee8dca5388a3f4219b18b3176331504af7fea67b00346c31ce585698b318e67d0273e1df15fe1773690b3fc2dcad5b082a133016fc8ba4bdfd88484ef7dfd60e11d80bf055db09232ad20bcf0af66c43592d3c04409a59d180d2dd07f491799255040d21fca314aafbd01366c243904663c10c73aae599a0a473c0960803d79795b9131f79dfb8c44f0a10fa8705c62a0762eb9e70b2393823eaf2ad1766c4a059b0a5b7007bafce34ac8677dd1221c0362f69f066269f7eed8913dcab38b47d758858c0e12e7f95f8ef63882ff10dbb671977283827aa9f46ba1e95e3e0c7bcda768e25dc98dd4ab1ed94df1209b9df9989c07951de9ac124d0cf2c80837e130753452f2bc858f4e0d933e7b22fd3a576c8cfc14f9628130f1cafd9a21cb6a224885dbc6564efff73fe927e18dd5b3d492ee6eaaf0dc3958cb0a28ab8190a713e1526e3acc43e9628ee7fd850cd24013fbfc1e6e7d2e3bb36461d8558ed30359b3655c15c7c500d65baea8f78aa1d4ae85b531fffa2b80ac2af46e9dce740fba968e753b0c0b92955da6e13ccb7da96c9cd0da12ee767744c1746579def6addbcf33bc69905fa81d920aee0e577c2226a0a43673b7433b6fe848066d693742d728afb9c7fef2075c4a93db3c7dbd82ce6ac0b563dce0e3542ab92f9466aaa28841189d08e4e60b57bad7c0316020323c7d966fb177258d3a9c946211b7f5a456c3810076ea70d875183122fbc05ba505a92b04e3d29f1738a077363e37a5c35f3b971551dc2292874e6225af6f5a8b00d0f4d383cc5279bfa89a20b66c8807526bd597c441c799fe05c5983e72cd3f0cd33479405de0f1a377e33cbb591430f7d654586f145df8795a43f971bfc8942db6f129b391a6da04fea5a167d55cfc342a0da89a900a7a5d6523baa5e74542ce61c650862ad29d8ee61a54da9f8ec16c36f1e53bfe0ba8670711fe06fe90e67b24a10aad043a541f2f430ad59a19b0f69bb276031fc3324afb4f1326f6b0a64ffe1a30e1c65cd13845c4874cc74f7ecb346c5031151c0f0cec9fe3713e6584b2298d13789000aaa0665157fbad027d7ca6a4d7e6fdfe206d8bf4e025551ebda0faee7d2fa572ca5c348605f5df6fe3635bc63a7d1ed0e11f2c1d0e14b738e99eb82be1ef457ab97b5c16f34310430d95d4bc8507f0b34cd26b1c437cf50669b78b4c1b4067a79fab91244070ff29530944ff67939b71a95e7d542f464aff8292edc7cc4ac68dd3e96ad344b988cb3a4c59e1d6636cf7874472619bcaaf8b11be8236b028d0a8a0b4390146f5ba1a3d1c5040f6938943e46e3f702c012eaf84fde950708d0f916e40a11152336fb45e54781b01ec164d1134130e3969c08b0078d68727e95a7ff4debf552d1adafdad9f7143cb8c1c3a05fc31202143f35284f3bc48d79483ea5ccaf115b65f6c79bd621dd03ec1afc30e1f08f5d2df5114a4ac9c10c3d5a6e6084f7ed76b405c07a5f5ab279a70da327125a6f2b6494a1b9ee11cd98849fa54e2139836747cfe8c4fdc3aa9ec64add316f8dc7ea0d6a1bfa8f36fa28feb2a66855bbb84f0001d73513a0d88beb3c7b31441402a53837250846e27ababba493fd59771c6161d3ad1c5c37c1ffaca7e470decb96e5d308a9f5dff6a697e74bdfabc7fdfe79b3da353bd08bc5c40c917a511f82f3ed86864bf5d25d5d544d98102169b63a49c60a98210465287f5264a1ddc848a3ade3d038c1caca9c122679cea5d6ec2b4a21d0292004c2fa06ea17b0e6e6028623ca907593b7ec58a7887d52e399d55585acf588607f610e705ad4c4dc65c4efcb3be5fc4238f7035c7458e1ad26a6b7d4f20c868058c8d7712bcbda2e4216f69e9b43fce0b891bab41bffb56491154a95715e4a7328f88ffdef5a82b16474905c91fa33e51b9a77c3ed556a0ff606ce6520e9dd32c092090e3601026cb0a97bf2d98706ce2ceba75c57082f772804b10431080b16372d2305f5234f5181d17f47c06df16bcc39fac6a50c65b3dd9da8e745eb58ad5eb4acf7965716a8387af19f7463fdddacf2ece40da64ee976f6cf41d9c5bb658b000690239426a08d00f256d825ffd7731c2da8bda9f88c5f3ddf79b7c4c8bfcf82b3883b72e278a5e27bc15aa390f4064cebfdb04e158d5b765370a72b3ab78771d355de33cc78834663cb1cee94a7358eb1495787aa709669357f8ca477f4316a869ad1a5812a35b137737474590e3957268424421093a5253e0c8bacf30dc95e7a1b5e1d959561b94e1b96ac0678723aa2d05526ae5817b2d748b6497c5d2224b17d29d280b7671b75fb4e05db3f6bd5a4ad4e57843127fa2c8e35cf754d7814fd567b97657ca5c12c514e55aae4d7206cdaaedb43f6297a717721c19f373c56345eb6ba1eb01905c5afa8d0e28d34c94de6e3e</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       
       
       <categories>
@@ -121,7 +134,7 @@
       <link href="2021/01/01/jue-dui-lu-jing/"/>
       <url>2021/01/01/jue-dui-lu-jing/</url>
       
-        <content type="html"><![CDATA[<h2 id="使用绝对路径的方式引入CSS文件"><a href="#使用绝对路径的方式引入CSS文件" class="headerlink" title="使用绝对路径的方式引入CSS文件"></a>使用绝对路径的方式引入CSS文件</h2><p>$ <link rel="stylesheet" href="${pageContext.request.contextPath}/themes/default/css/ueditor.css" type="text/css"/></p><h2 id="使用绝对路径的方式引入JavaScript脚本"><a href="#使用绝对路径的方式引入JavaScript脚本" class="headerlink" title="使用绝对路径的方式引入JavaScript脚本"></a>使用绝对路径的方式引入JavaScript脚本</h2><p>$ <script type="text/javascript" src="{pageContext.request.contextPath}/ueditor1_3_6-gbk-jsp/ueditor.config.js"></script></p><p>#<script type="text/javascript" src="<%=request.getContextPath()%>/ueditor1_3_6-gbk-jsp/ueditor.all.js"></script><br>${pageContext.request.contextPath}与&lt;%getContextPath%&gt;效果相同。<br>取出部署的应用程序名，这样不管如何部署，所用路径都是正确的。</p><h2 id="JRE-–-java-runtime-environment"><a href="#JRE-–-java-runtime-environment" class="headerlink" title="JRE – java runtime environment"></a>JRE – java runtime environment</h2><p>   JRE是指java运行环境。光有JVM还不能成class的执行，因为在解释class的时候JVM需要调用解释所需要的类库lib。在JDK的安装目录里你可以找到jre目录，里面有两个文件夹bin和lib,在这里可以认为bin里的就是jvm，lib中则是jvm工作所需要的类库，而jvm和 lib和起来就称为jre。所以，在你写完java程序编译成.class之后，你可以把这个.class文件和jre一起打包发给朋友，这样你的朋友就可以运行你写程序了。（jre里有运行.class的java.exe）</p><h2 id="JDK-–-java-development-kit"><a href="#JDK-–-java-development-kit" class="headerlink" title="JDK – java development kit"></a>JDK – java development kit</h2>]]></content>
+        <content type="html"><![CDATA[<h2 id="使用绝对路径的方式引入CSS文件"><a href="#使用绝对路径的方式引入CSS文件" class="headerlink" title="使用绝对路径的方式引入CSS文件"></a>使用绝对路径的方式引入CSS文件</h2><p>$ <link rel="stylesheet" href="${pageContext.request.contextPath}/themes/default/css/ueditor.css" type="text/css"></p><h2 id="使用绝对路径的方式引入JavaScript脚本"><a href="#使用绝对路径的方式引入JavaScript脚本" class="headerlink" title="使用绝对路径的方式引入JavaScript脚本"></a>使用绝对路径的方式引入JavaScript脚本</h2><p>$ <script type="text/javascript" src="{pageContext.request.contextPath}/ueditor1_3_6-gbk-jsp/ueditor.config.js"></script></p><p>#<script type="text/javascript" src="<%=request.getContextPath()%>/ueditor1_3_6-gbk-jsp/ueditor.all.js"></script><br>${pageContext.request.contextPath}与&lt;%getContextPath%&gt;效果相同。<br>取出部署的应用程序名，这样不管如何部署，所用路径都是正确的。</p><h2 id="JRE-–-java-runtime-environment"><a href="#JRE-–-java-runtime-environment" class="headerlink" title="JRE – java runtime environment"></a>JRE – java runtime environment</h2><p>   JRE是指java运行环境。光有JVM还不能成class的执行，因为在解释class的时候JVM需要调用解释所需要的类库lib。在JDK的安装目录里你可以找到jre目录，里面有两个文件夹bin和lib,在这里可以认为bin里的就是jvm，lib中则是jvm工作所需要的类库，而jvm和 lib和起来就称为jre。所以，在你写完java程序编译成.class之后，你可以把这个.class文件和jre一起打包发给朋友，这样你的朋友就可以运行你写程序了。（jre里有运行.class的java.exe）</p><h2 id="JDK-–-java-development-kit"><a href="#JDK-–-java-development-kit" class="headerlink" title="JDK – java development kit"></a>JDK – java development kit</h2>]]></content>
       
       
       <categories>
@@ -134,6 +147,31 @@
         <tags>
             
             <tag> 前端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>linux——虚拟机安装</title>
+      <link href="2021/01/01/linux-xu-ni-ji/"/>
+      <url>2021/01/01/linux-xu-ni-ji/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Ubuntu-16-04-安装："><a href="#Ubuntu-16-04-安装：" class="headerlink" title="Ubuntu 16.04 安装："></a>Ubuntu 16.04 安装：</h1><p><a href="http://www.baidu.com/" title="百度">http://www.baidu.com</a></p><p><em><a href="https://blog.csdn.net/kellyroslyn/article/details/91607520">https://blog.csdn.net/kellyroslyn/article/details/91607520</a></em><br>界面显示不全， 左手按住alt键右手鼠标往上拖动安装界面，即可显示完全内容</p><h1 id="vmware-Tools-安装："><a href="#vmware-Tools-安装：" class="headerlink" title="vmware Tools 安装："></a>vmware Tools 安装：</h1><p><a href="https://blog.csdn.net/weixin_37182342/article/details/80236632?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task">https://blog.csdn.net/weixin_37182342/article/details/80236632?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task</a> </p><h2 id="桥接模式设置，解决连不上网的问题"><a href="#桥接模式设置，解决连不上网的问题" class="headerlink" title="桥接模式设置，解决连不上网的问题"></a>桥接模式设置，解决连不上网的问题</h2><ol><li><a href="https://blog.csdn.net/Mr_jianfeng/article/details/81053849/">https://blog.csdn.net/Mr_jianfeng/article/details/81053849/</a><h2 id="安装谷歌中文输入法："><a href="#安装谷歌中文输入法：" class="headerlink" title="安装谷歌中文输入法："></a>安装谷歌中文输入法：</h2></li><li><a href="https://blog.csdn.net/lybhit/article/details/78663731">https://blog.csdn.net/lybhit/article/details/78663731</a></li><li>mqtt</li><li><a href="https://blog.csdn.net/jsjwr/article/details/78800202">https://blog.csdn.net/jsjwr/article/details/78800202</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 虚拟机 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
             
         </tags>
       
