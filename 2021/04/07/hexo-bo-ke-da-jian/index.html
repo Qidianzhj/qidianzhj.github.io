@@ -480,32 +480,17 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>#github创建个人仓库  #<br>登录成功之后，点击 GitHub 中的 New repository 创建新仓库，仓库名应该为：用户名 .<a target="_blank" rel="noopener" href="http://github.io/">http://github.io</a> 。这里用户名使用你的 GitHub 帐号名称代替，这是固定写法。<br>我的仓库名为：<br><img src="/2021/04/07/hexo-bo-ke-da-jian/1.jpg"></p>
+                <p>#github创建个人仓库  #<br>登录成功之后，点击 GitHub 中的 New repository 创建新仓库，仓库名应该为：用户名 .<a target="_blank" rel="noopener" href="http://github.io/">http://github.io</a> 。这里用户名使用你的 GitHub 帐号名称代替，这是固定写法。<br>我的仓库名为：<br><img src="/2021/04/07/hexo-bo-ke-da-jian/1.png"></p>
 <h1 id="git-管理"><a href="#git-管理" class="headerlink" title="git 管理"></a>git 管理</h1><p>Git 是目前世界上最先进的分布式版本控制系统（没有之一）。这是使用 Git 的目的是为了将我们的网站从本地提交上服务器（GitHub）上面去。我认为 Git 操作是程序员应该具备的一个基本操作，具体的 Git 操作细节可以查看廖雪峰的教程，讲的十分详细<br><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600" title="git教程">https://www.liaoxuefeng.com/wiki/896043488029600</a><br>安装好 Git 后，只需要进行下面的配置即可。</p>
-<h1 id="配置信息"><a href="#配置信息" class="headerlink" title="配置信息"></a>配置信息</h1><p>在终端进行操作，设置 user.name 和 user.email 配置信息，我这里设置为全局。<br>    ``` bash<br>git config –global user.name “你的GitHub用户名”<br>git config –global user.email “你的GitHub注册邮箱”</p>
-<pre><code>
-# 生成秘钥 #
-
-通过注册的邮箱生成 ssh 密钥文件：
- `ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;`
-然后直接三个回车即可，默认不需要设置密码。最后得到了两个文件：id_rsa和id_rsa.pub。
-
-## 拷贝密钥 ##
-
-![](2.jpg)
-打开 id_rsa.pub 文件，将里面的内容全部复制。
-![](3.jpg)
-**粘贴到GitHub**
-![](4.jpg)
-![](5.jpg)
-**测试GitHub SSH**
-添加好 SSH Key后，进行测试。
-    `ssh -T git@github.com`
-你将会看到：
-    ``` bash
-   The authenticity of host &#39;github.com (207.97.227.239)&#39; can&#39;t be established.
+<h1 id="配置信息"><a href="#配置信息" class="headerlink" title="配置信息"></a>配置信息</h1><p>在终端进行操作，设置 user.name 和 user.email 配置信息，我这里设置为全局。</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> config --global user.name <span class="token string">"你的GitHub用户名"</span>
+<span class="token function">git</span> config --global user.email <span class="token string">"你的GitHub注册邮箱"</span>
+</code></pre>
+<h1 id="生成秘钥"><a href="#生成秘钥" class="headerlink" title="生成秘钥"></a>生成秘钥</h1><p>通过注册的邮箱生成 ssh 密钥文件：<br> <code>ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</code><br>然后直接三个回车即可，默认不需要设置密码。最后得到了两个文件：id_rsa和id_rsa.pub。</p>
+<h2 id="拷贝密钥"><a href="#拷贝密钥" class="headerlink" title="拷贝密钥"></a>拷贝密钥</h2><p><img src="/2021/04/07/hexo-bo-ke-da-jian/2.jpg"><br>打开 id_rsa.pub 文件，将里面的内容全部复制。<br><img src="/2021/04/07/hexo-bo-ke-da-jian/3.jpg"><br><strong>粘贴到GitHub</strong><br><img src="/2021/04/07/hexo-bo-ke-da-jian/4.jpg"><br><img src="/2021/04/07/hexo-bo-ke-da-jian/5.jpg"><br><strong>测试GitHub SSH</strong><br>添加好 SSH Key后，进行测试。<br>    <code>ssh -T git@github.com</code><br>你将会看到：</p>
+<pre class=" language-bash"><code class="language-bash">   The authenticity of host <span class="token string">'github.com (207.97.227.239)'</span> can't be established.
 2RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
-3Are you sure you want to continue connecting (yes/no)?</code></pre>
+3Are you sure you want to <span class="token keyword">continue</span> connecting <span class="token punctuation">(</span>yes/no<span class="token punctuation">)</span>?</code></pre>
 <p>选择 yes.<br><img src="/2021/04/07/hexo-bo-ke-da-jian/6.jpg"><br>如果看到Hi后面是你的用户名，就说明成功了。</p>
 <h1 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h1><p>Hexo 基于 Node.js，因此需要先安装 Node.js，你可以在这里进行对应电脑版本的下载：<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/" title="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a><br><img src="/2021/04/07/hexo-bo-ke-da-jian/7.jpg"><br>你也可以通过命令行进行安装：<br>cURL:<br>    <code>curl https://raw.github.com/creationix/nvm/v0.33.11/install.sh | sh</code><br>Wget:<br>    <code>wget -qO- https://raw.github.com/creationix/nvm/v0.33.11/install.sh | sh</code><br>安装完成后，重启终端并执行下列命令即可安装 Node.js。<br>    <code>nvm install stable</code></p>
 <h2 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
@@ -515,16 +500,15 @@
 <p>注意：下面的命令都是在 myBlog文件里进行操作的。<br><img src="/2021/04/07/hexo-bo-ke-da-jian/9.jpg"></p>
 <h3 id="直接导入文章"><a href="#直接导入文章" class="headerlink" title="直接导入文章"></a>直接导入文章</h3><p>你可以将你平时写的文章直接导入到 _posts 文件夹里，注意文章类型得是 md格式。</p>
 <h3 id="写新文章"><a href="#写新文章" class="headerlink" title="写新文章"></a>写新文章</h3><p>你可以执行下列命令来创建一篇新文章。<br>    <code>hexo new [layout] &lt;title&gt;</code><br>你可以在命令中指定文章的布局（layout），默认为 post，可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局。<br>这样在 _posts 文件夹里也生成了一篇新的文章。<br><img src="/2021/04/07/hexo-bo-ke-da-jian/10.jpg"></p>
-<p>这三个命令依次就是新建一篇博客文章、生成网页、在本地预览的操作。<br>    ``` bash<br>hexo new “我的博客文章” #新建文章</p>
-<p>hexo generate #生成网页</p>
-<p>hexo server #启动服务预览</p>
-<pre><code># 部署 #
-Hexo 提供了快速方便的一键部署功能，只需一条命令就能将网站部署到服务器上。
-    ` hexo deploy`
-在开始之前，必须先在 _config.yml 中修改参数，一个正确的部署配置中至少要有 type 参数，例如：
-    ``` bash 
-deploy:
-type: git</code></pre>
+<p>这三个命令依次就是新建一篇博客文章、生成网页、在本地预览的操作。</p>
+<pre class=" language-bash"><code class="language-bash">hexo new <span class="token string">"我的博客文章"</span> <span class="token comment" spellcheck="true">#新建文章</span>
+
+hexo generate <span class="token comment" spellcheck="true">#生成网页</span>
+
+hexo server <span class="token comment" spellcheck="true">#启动服务预览</span></code></pre>
+<h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><p>Hexo 提供了快速方便的一键部署功能，只需一条命令就能将网站部署到服务器上。<br>    <code> hexo deploy</code><br>在开始之前，必须先在 _config.yml 中修改参数，一个正确的部署配置中至少要有 type 参数，例如：</p>
+<pre class=" language-bash"><code class="language-bash">deploy:
+type: <span class="token function">git</span></code></pre>
 <p>在_config.yml中进行修改。<br>  <img src="/2021/04/07/hexo-bo-ke-da-jian/11.png"><br>这一步的目的是将 Hexo 与 GitHub 进行关联。</p>
 <p>配置好后通过<br>    <code>hexo d </code></p>
 <p>命令，稍等片刻，网站就已经部署好了，可以在浏览器输入你的GitHub名称.github.io，这样一个免费的博客就已经搭建好了。</p>
