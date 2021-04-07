@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
 
-    <meta name="keywords" content="hexo与github图片不显示, 小Z的成长日记">
+    <meta name="keywords" content="hexo博客搭建, 小Z的成长日记">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>hexo与github图片不显示 | 小Z的成长日记</title>
+    <title>hexo博客搭建 | 小Z的成长日记</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hexo与github图片不显示</h1>
+                    <h1 class="description center-align post-title">hexo博客搭建</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/github/">
-                                <span class="chip bg-color">github</span>
+                            <a href="/tags/hexo/">
+                                <span class="chip bg-color">hexo</span>
                             </a>
                         
                     </div>
@@ -446,11 +446,7 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                前端
-                            </a>
-                        
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/hexo/" class="post-category">
+                            <a href="/categories/hexo/" class="post-category">
                                 hexo
                             </a>
                         
@@ -463,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-17
+                    2021-04-07
                 </div>
                 
 
@@ -484,104 +480,63 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="github图片不显示问题："><a href="#github图片不显示问题：" class="headerlink" title="github图片不显示问题："></a>github图片不显示问题：</h1><p>C:\Windows\System32\drivers\etc\hosts:</p>
-<p>修改权限</p>
-<p>末行加入：<br>140.82.114.4    github.com </p>
-<p>140.82.113.3    gist.github.com</p>
-<p>199.232.28.133    assets-cdn.github.com</p>
-<p>199.232.28.133    raw.githubusercontent.com</p>
-<p>199.232.28.133    gist.githubusercontent.com</p>
-<p>199.232.28.133    cloud.githubusercontent.com</p>
-<p>199.232.28.133    camo.githubusercontent.com</p>
-<p>199.232.28.133    avatars0.githubusercontent.com</p>
-<p>199.232.28.133    avatars1.githubusercontent.com</p>
-<p>199.232.28.133    avatars2.githubusercontent.com</p>
-<p>199.232.28.133    avatars3.githubusercontent.com</p>
-<p>199.232.28.133    avatars4.githubusercontent.com</p>
-<p>199.232.28.133    avatars5.githubusercontent.com</p>
-<p>199.232.28.133    avatars6.githubusercontent.com</p>
-<p>199.232.28.133    avatars7.githubusercontent.com</p>
-<p>199.232.28.133    avatars8.githubusercontent.com</p>
-<hr>
-<p>#hexo 添加图片问题#</p>
-<pre class=" language-bash"><code class="language-bash">$ hexo generate
-fdjhgfdjkfdjh
-fdhfdhd</code></pre>
-<ul>
-<li>插件安装与配置</li>
-</ul>
-<p>首先我们需要安装一个图片路径转换的插件，这个插件名字是hexo-asset-image</p>
-<pre class=" language-bash"><code class="language-bash">  <span class="token function">npm</span> <span class="token function">install</span> https://github.com/CodeFalling/hexo-asset-image --save</code></pre>
-<ul>
-<li><p>打开/node_modules/hexo-asset-image/index.js，将内容更换为下面的代码</p>
-<pre class=" language-bash"><code class="language-bash">  <span class="token string">'use strict'</span><span class="token punctuation">;</span>
-  var cheerio <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">'cheerio'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-//http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string
-  <span class="token keyword">function</span> getPosition<span class="token punctuation">(</span>str, m, i<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-    <span class="token keyword">return</span> str.split<span class="token punctuation">(</span>m, i<span class="token punctuation">)</span>.join<span class="token punctuation">(</span>m<span class="token punctuation">)</span>.length<span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+                <p>#github创建个人仓库  #<br>登录成功之后，点击 GitHub 中的 New repository 创建新仓库，仓库名应该为：用户名 .<a target="_blank" rel="noopener" href="http://github.io/">http://github.io</a> 。这里用户名使用你的 GitHub 帐号名称代替，这是固定写法。<br>我的仓库名为：<br><img src="/2021/04/07/hexo-bo-ke-da-jian/1.jpg"></p>
+<h1 id="git-管理"><a href="#git-管理" class="headerlink" title="git 管理"></a>git 管理</h1><p>Git 是目前世界上最先进的分布式版本控制系统（没有之一）。这是使用 Git 的目的是为了将我们的网站从本地提交上服务器（GitHub）上面去。我认为 Git 操作是程序员应该具备的一个基本操作，具体的 Git 操作细节可以查看廖雪峰的教程，讲的十分详细<br><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600" title="git教程">https://www.liaoxuefeng.com/wiki/896043488029600</a><br>安装好 Git 后，只需要进行下面的配置即可。</p>
+<h1 id="配置信息"><a href="#配置信息" class="headerlink" title="配置信息"></a>配置信息</h1><p>在终端进行操作，设置 user.name 和 user.email 配置信息，我这里设置为全局。<br>    ``` bash<br>git config –global user.name “你的GitHub用户名”<br>git config –global user.email “你的GitHub注册邮箱”</p>
+<pre><code>
+# 生成秘钥 #
 
-  var version <span class="token operator">=</span> String<span class="token punctuation">(</span>hexo.version<span class="token punctuation">)</span>.split<span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  hexo.extend.filter.register<span class="token punctuation">(</span><span class="token string">'after_post_render'</span>, function<span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-    var config <span class="token operator">=</span> hexo.config<span class="token punctuation">;</span>
-    if<span class="token punctuation">(</span>config.post_asset_folder<span class="token punctuation">)</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-      var <span class="token function">link</span> <span class="token operator">=</span> data.permalink<span class="token punctuation">;</span>
-      if<span class="token punctuation">(</span>version.length <span class="token operator">></span> 0 <span class="token operator">&amp;&amp;</span> Number<span class="token punctuation">(</span>version<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">==</span> 3<span class="token punctuation">)</span>
-         var beginPos <span class="token operator">=</span> getPosition<span class="token punctuation">(</span>link, <span class="token string">'/'</span>, 1<span class="token punctuation">)</span> + 1<span class="token punctuation">;</span>
-      <span class="token keyword">else</span>
-         var beginPos <span class="token operator">=</span> getPosition<span class="token punctuation">(</span>link, <span class="token string">'/'</span>, 3<span class="token punctuation">)</span> + 1<span class="token punctuation">;</span>
-      // In hexo 3.1.1, the permalink of <span class="token string">"about"</span> page is like <span class="token string">".../about/index.html"</span><span class="token keyword">.</span>
-      var endPos <span class="token operator">=</span> link.lastIndexOf<span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span> + 1<span class="token punctuation">;</span>
-  <span class="token function">link</span> <span class="token operator">=</span> link.substring<span class="token punctuation">(</span>beginPos, endPos<span class="token punctuation">)</span><span class="token punctuation">;</span>
+通过注册的邮箱生成 ssh 密钥文件：
+ `ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;`
+然后直接三个回车即可，默认不需要设置密码。最后得到了两个文件：id_rsa和id_rsa.pub。
 
-  var toprocess <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'excerpt'</span>, <span class="token string">'more'</span>, <span class="token string">'content'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-  for<span class="token punctuation">(</span>var i <span class="token operator">=</span> 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> toprocess.length<span class="token punctuation">;</span> i++<span class="token punctuation">)</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-    var key <span class="token operator">=</span> toprocess<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
- var $ <span class="token operator">=</span> cheerio.load<span class="token punctuation">(</span>data<span class="token punctuation">[</span>key<span class="token punctuation">]</span>, <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
- ignoreWhitespace: false,
-  xmlMode: false,
-  lowerCaseTags: false,
-  decodeEntities: <span class="token boolean">false</span>
-    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;);</span>
-    <span class="token punctuation">$(</span><span class="token string">'img'</span><span class="token punctuation">)</span>.each<span class="token punctuation">(</span>function<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable"><span class="token variable">$(</span>this<span class="token variable">)</span></span>.attr<span class="token punctuation">(</span><span class="token string">'src'</span><span class="token punctuation">))</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-        // For windows style path, we replace <span class="token string">'\' to '</span>/<span class="token string">'.
-        var src = <span class="token variable"><span class="token variable">$(</span>this<span class="token variable">)</span></span>.attr('</span>src<span class="token string">').replace('</span>\\<span class="token string">', '</span>/<span class="token string">');
-        if(!/http[s]*.*|\/\/.*/.test(src) &amp;&amp;
-           !/^\s*\//.test(src)) &amp;#123;
-          // For "about" page, the first part of "src" can'</span>t be removed.
-          // In addition, to support multi-level local directory.
-          var linkArray <span class="token operator">=</span> link.split<span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span>.filter<span class="token punctuation">(</span>function<span class="token punctuation">(</span>elem<span class="token punctuation">)</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-            <span class="token keyword">return</span> elem <span class="token operator">!=</span> <span class="token string">''</span><span class="token punctuation">;</span>
-          <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;);</span>
-          var srcArray <span class="token operator">=</span> src.split<span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span>.filter<span class="token punctuation">(</span>function<span class="token punctuation">(</span>elem<span class="token punctuation">)</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-            <span class="token keyword">return</span> elem <span class="token operator">!=</span> <span class="token string">''</span> <span class="token operator">&amp;&amp;</span> elem <span class="token operator">!=</span> <span class="token string">'.'</span><span class="token punctuation">;</span>
-          <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;);</span>
-          if<span class="token punctuation">(</span>srcArray.length <span class="token operator">></span> 1<span class="token punctuation">)</span>
-            srcArray.shift<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          src <span class="token operator">=</span> srcArray.join<span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token variable"><span class="token variable">$(</span>this<span class="token variable">)</span></span>.attr<span class="token punctuation">(</span><span class="token string">'src'</span>, config.root + <span class="token function">link</span> + src<span class="token punctuation">)</span><span class="token punctuation">;</span>
-          console.info<span class="token operator">&amp;&amp;</span>console.info<span class="token punctuation">(</span><span class="token string">"update link as:-->"</span>+config.root + <span class="token function">link</span> + src<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
-    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;else&amp;#123;</span>
-        console.info<span class="token operator">&amp;&amp;</span>console.info<span class="token punctuation">(</span><span class="token string">"no src attr, skipped..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        console.info<span class="token operator">&amp;&amp;</span>console.info<span class="token punctuation">(</span><span class="token variable"><span class="token variable">$(</span>this<span class="token variable">)</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;);</span>
-data<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> $.html<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
-    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
-  <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;);</span></code></pre>
-</li>
-</ul>
-<ul>
-<li><p>打开_config.yml文件，修改下述内容</p>
-<p><code>  post_asset_folder: true</code></p>
-</li>
-<li><p>创建文章及其同名文件夹<br>hexo new file<br>在_post文件夹里创建了file.md和file文件夹，将需要的图片复制到file里。<br>！<a href="picture.png">随便写</a> 导入图片。</p>
-</li>
-<li><p>问题<br><img src="/2021/01/17/hexo-he-github-tu-pian/1.png" alt="问题"></p>
-</li>
+## 拷贝密钥 ##
+
+![](2.jpg)
+打开 id_rsa.pub 文件，将里面的内容全部复制。
+![](3.jpg)
+**粘贴到GitHub**
+![](4.jpg)
+![](5.jpg)
+**测试GitHub SSH**
+添加好 SSH Key后，进行测试。
+    `ssh -T git@github.com`
+你将会看到：
+    ``` bash
+   The authenticity of host &#39;github.com (207.97.227.239)&#39; can&#39;t be established.
+2RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+3Are you sure you want to continue connecting (yes/no)?</code></pre>
+<p>选择 yes.<br><img src="/2021/04/07/hexo-bo-ke-da-jian/6.jpg"><br>如果看到Hi后面是你的用户名，就说明成功了。</p>
+<h1 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h1><p>Hexo 基于 Node.js，因此需要先安装 Node.js，你可以在这里进行对应电脑版本的下载：<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/" title="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a><br><img src="/2021/04/07/hexo-bo-ke-da-jian/7.jpg"><br>你也可以通过命令行进行安装：<br>cURL:<br>    <code>curl https://raw.github.com/creationix/nvm/v0.33.11/install.sh | sh</code><br>Wget:<br>    <code>wget -qO- https://raw.github.com/creationix/nvm/v0.33.11/install.sh | sh</code><br>安装完成后，重启终端并执行下列命令即可安装 Node.js。<br>    <code>nvm install stable</code></p>
+<h2 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<p>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。<br>    <code>npm install -g hexo-cli</code></p>
+<h1 id="Hexo使用"><a href="#Hexo使用" class="headerlink" title="Hexo使用"></a>Hexo使用</h1><p>安装好 Hexo 后，马上就能使用了。首先初始化博客，输入：<br>    <code>hexo init myBlog</code><br><img src="/2021/04/07/hexo-bo-ke-da-jian/8.jpg"><br>接下来，进入文件夹 myBlog,输入<br>    <code>hexo s</code><br>然后，打开浏览器输入地址：<br>    <code>localhost:4000</code></p>
+<p>执行到这里事实上博客就已经搭建好了，接下来就是去完善它。</p>
+<p>注意：下面的命令都是在 myBlog文件里进行操作的。<br><img src="/2021/04/07/hexo-bo-ke-da-jian/9.jpg"></p>
+<h3 id="直接导入文章"><a href="#直接导入文章" class="headerlink" title="直接导入文章"></a>直接导入文章</h3><p>你可以将你平时写的文章直接导入到 _posts 文件夹里，注意文章类型得是 md格式。</p>
+<h3 id="写新文章"><a href="#写新文章" class="headerlink" title="写新文章"></a>写新文章</h3><p>你可以执行下列命令来创建一篇新文章。<br>    <code>hexo new [layout] &lt;title&gt;</code><br>你可以在命令中指定文章的布局（layout），默认为 post，可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局。<br>这样在 _posts 文件夹里也生成了一篇新的文章。<br><img src="/2021/04/07/hexo-bo-ke-da-jian/10.jpg"></p>
+<p>这三个命令依次就是新建一篇博客文章、生成网页、在本地预览的操作。<br>    ``` bash<br>hexo new “我的博客文章” #新建文章</p>
+<p>hexo generate #生成网页</p>
+<p>hexo server #启动服务预览</p>
+<pre><code># 部署 #
+Hexo 提供了快速方便的一键部署功能，只需一条命令就能将网站部署到服务器上。
+    ` hexo deploy`
+在开始之前，必须先在 _config.yml 中修改参数，一个正确的部署配置中至少要有 type 参数，例如：
+    ``` bash 
+deploy:
+type: git</code></pre>
+<p>在_config.yml中进行修改。<br>  <img src="/2021/04/07/hexo-bo-ke-da-jian/11.png"><br>这一步的目的是将 Hexo 与 GitHub 进行关联。</p>
+<p>配置好后通过<br>    <code>hexo d </code></p>
+<p>命令，稍等片刻，网站就已经部署好了，可以在浏览器输入你的GitHub名称.github.io，这样一个免费的博客就已经搭建好了。</p>
+<h1 id="markdown-写作"><a href="#markdown-写作" class="headerlink" title="markdown 写作"></a>markdown 写作</h1><p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。世面上支持 Markdown 语法的编辑器不胜枚举，选择起来十分困难，小吴在这里推荐 Typora 这款 Markdown 写作软件。Typora 是一款免费的 MD 编辑器，它是优雅简洁与强大开放的完美结合体。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul>
+<li>申请 GitHub 账号</li>
+<li>在 GitHub 上创建仓库</li>
+<li>配备 Git ，同时将 SSH Key 提交到GitHub 上</li>
+<li>安装 Node.js</li>
+<li>安装 Hexo</li>
+<li>安装 Hexo 主题</li>
+<li>使用 Markdown 软件写文章</li>
 </ul>
 
                 
@@ -609,7 +564,7 @@ data<span class="token punctuation">[</span>key<span class="token punctuation">]
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://qidianzhj.github.io/2021/01/17/hexo-he-github-tu-pian/">https://qidianzhj.github.io/2021/01/17/hexo-he-github-tu-pian/</a>
+                    <a href="https://qidianzhj.github.io/2021/04/07/hexo-bo-ke-da-jian/">https://qidianzhj.github.io/2021/04/07/hexo-bo-ke-da-jian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -647,8 +602,8 @@ data<span class="token punctuation">[</span>key<span class="token punctuation">]
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/github/">
-                                    <span class="chip bg-color">github</span>
+                                <a href="/tags/hexo/">
+                                    <span class="chip bg-color">hexo</span>
                                 </a>
                             
                         </div>
@@ -692,9 +647,60 @@ data<span class="token punctuation">[</span>key<span class="token punctuation">]
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/04/07/hexo-bo-ke-da-jian/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="hexo博客搭建">
+                        
+                        <span class="card-title">hexo博客搭建</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/04/06/123/">
                     <div class="card-image">
@@ -712,9 +718,9 @@ data<span class="token punctuation">[</span>key<span class="token punctuation">]
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -732,55 +738,6 @@ data<span class="token punctuation">[</span>key<span class="token punctuation">]
                     
                     <a href="/tags/markdown/">
                         <span class="chip bg-color">markdown</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/01/17/hexo-zhu-ti/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="hexo主题">
-                        
-                        <span class="card-title">hexo主题</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-17
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
                     </a>
                     
                 </div>
