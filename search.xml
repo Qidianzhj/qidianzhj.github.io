@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>JVM和容器类</title>
+      <link href="2021/04/10/jvm-he-rong-qi-lei/"/>
+      <url>2021/04/10/jvm-he-rong-qi-lei/</url>
+      
+        <content type="html"><![CDATA[<h2 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h2><p>长生命周期的对象一直持有短生命周期的对象引用，导致后者一直不能释放。</p><h2 id="线程安全的方法"><a href="#线程安全的方法" class="headerlink" title="线程安全的方法"></a>线程安全的方法</h2><p>CAS+失败重试保证操作的原子性。<br>本地线程分配缓冲：每个线程提前分配一小块内存，不够在分配一次。</p><h2 id="内存分配的两种方式"><a href="#内存分配的两种方式" class="headerlink" title="内存分配的两种方式"></a>内存分配的两种方式</h2><p>内存规整：指针碰撞<br>内存不规整：空闲列表</p><h2 id="垃圾收集器"><a href="#垃圾收集器" class="headerlink" title="垃圾收集器"></a>垃圾收集器</h2><p>判断垃圾是否可以回收：<br>①，引用计数器法<br>②，可达性分析算法。有向图中从root对象没有路径可走时，可以进行回收。<br>③，当老年代所在内存满了进行全局垃圾回收（新生代和老年代）<br>垃圾回收算法：<br>标记-清除（CMS）<br>复制算法（新生）<br>标记-整理（老年）<br>分代<br>垃圾回收器：<br>新生代：（复制）serial parnew parallel<br>老年代：<br>serial old（标记整理），parallel old（标记整理），CMS（标记清除）<br>G1（全堆）</p><h2 id="类加载器的整形过程"><a href="#类加载器的整形过程" class="headerlink" title="类加载器的整形过程"></a>类加载器的整形过程</h2><p>①，加载相应class文件。<br>②，检验文件正确性<br>③，分配内存<br>④，将常量池的符号引用（标示）替换为直接引用（内存地址）<br>⑤，初始化静态变量，执行静态代码块。</p><h2 id="类加载器的双亲委派机制"><a href="#类加载器的双亲委派机制" class="headerlink" title="类加载器的双亲委派机制"></a>类加载器的双亲委派机制</h2><p>为什么要使用双亲委派模型？<br>我们自定义一个java.lang.String的同名类，并放在classpath中，可能会使内存中出现多个String类，无法保证类之间的比较结果和类的唯一性，导致程序混乱。</p><h2 id="垃圾回收过程"><a href="#垃圾回收过程" class="headerlink" title="垃圾回收过程"></a>垃圾回收过程</h2><p>新生代（minor GC）：eden（存活对象） from survivor（年龄大的存活对象，移动式进行处理，年龄大于一定的值会变为老年代） to survivor（移动目的地）<br>①，eden和fromsurvivor中的存活对象移到tosurvivor<br>②，清空eden和from survivor<br>③，fromsurvivor与tosurvivor进行置换。<br>老年代：（major GC）</p><p>jvm相关面试题：<br><a href="https://blog.csdn.net/qq_41701956/article/details/100074023" title="https://blog.csdn.net/qq_41701956/article/details/100074023">https://blog.csdn.net/qq_41701956/article/details/100074023</a></p><h2 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h2><p>轻量级的synchronized，实现可见性（当一个线程修改共享变量时，另一个线程也可以访问修改的共享变量），但不保证原子性。<br><a href="https://www.jianshu.com/p/08a0a8c984ab" title="https://www.jianshu.com/p/08a0a8c984ab">https://www.jianshu.com/p/08a0a8c984ab</a></p><h2 id="Netty面试相关"><a href="#Netty面试相关" class="headerlink" title="Netty面试相关"></a>Netty面试相关</h2><p><a href="https://baijiahao.baidu.com/s?id=1669639041722396699&wfr=spider&for=pc" title="https://baijiahao.baidu.com/s?id=1669639041722396699&amp;wfr=spider&amp;for=pc">https://baijiahao.baidu.com/s?id=1669639041722396699&amp;wfr=spider&amp;for=pc</a></p><h2 id="hashmap扩容"><a href="#hashmap扩容" class="headerlink" title="hashmap扩容"></a>hashmap扩容</h2><p><img src="/2021/04/10/jvm-he-rong-qi-lei/1.png"><br>hashcode：不可变类可缓存，下次调用不须计算，直接从缓存取哈希值。<br>equals<br>resize（）：JDK1.7余JDK1.8<br>红黑树：<br>根和叶子节点都是黑节点，红节点不能连续，任何一个节点到他的叶子结点的每一条路径上的黑节点数目要相同。<br>拉链法<br>hashSet基于hashMap的Key唯一的特性。<br>hashmap：数据经hashcode散列后获得哈希值，哈希值需要在经过hash&amp;（tablesize-1）=表的下表，然后在遍历链或红黑树。原因是哈希值可能不在表大小所在的范围内，无法和表下标进行匹配，经此方法后减少了哈希冲突的同时也使得数据在表中分布的更为均匀。<br>如果链表长度大于8且数组长度小于64，首先进行扩容处理，此时转红黑树的效率不如扩容，因为数组太小了；当链表长度大于8且数组长度大于64时，转为红黑树。默认容量为16.</p><h2 id="concurrentHashMap"><a href="#concurrentHashMap" class="headerlink" title="concurrentHashMap"></a>concurrentHashMap</h2><p>Node+CAS+synchronized+链表+红黑树（分段，加锁，比hashtable粒度更小）<br>线程安全的，jdk1.8 采用数组+链表+红黑树结构，并通过CAS算法和同步锁实现线程安全。同步锁只锁定Node的链表或红黑树的根节点，这样只要hash不冲突就不会有并发问题，提高了效率。<br>CAS算法：两次读取内存数据，判断是否一样，一样更新，否则自旋等待其他线程退出，重试操作，自旋会消耗CPU，我们要限制自旋的次数。CAS有ABA问题，对于引用数据类型会产生一些问题，解决方法版本号机制。<br><img src="/2021/04/10/jvm-he-rong-qi-lei/2.png"><br>synchronized锁住每一个链表的表头节点和红黑树的根节点，对其进行同步，但是对空的，未初始化的node怎么办呢，通过cas算法对其进行无锁式同步初始化，保证多线程情况下实现安全同步。<br>hash冲突解决办法：</p><p><img src="/2021/04/10/jvm-he-rong-qi-lei/3.png"></p><h2 id="hashmap死循环问题"><a href="#hashmap死循环问题" class="headerlink" title="hashmap死循环问题"></a>hashmap死循环问题</h2><p>多线程条件下，他是线程不安全的，多个线程同时执行扩容操作，会产生节点指向自身，不断while的情况，产生死循环。</p><h2 id="hashmap与hashtable的区别"><a href="#hashmap与hashtable的区别" class="headerlink" title="hashmap与hashtable的区别"></a>hashmap与hashtable的区别</h2><p><img src="/2021/04/10/jvm-he-rong-qi-lei/4.png"></p><h2 id="concurrenthashmap和hashtable的区别"><a href="#concurrenthashmap和hashtable的区别" class="headerlink" title="concurrenthashmap和hashtable的区别"></a>concurrenthashmap和hashtable的区别</h2><p><img src="/2021/04/10/jvm-he-rong-qi-lei/5.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> work </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> work </tag>
+            
+            <tag> 面经 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>项目说明</title>
       <link href="2021/04/10/xiang-mu-shuo-ming/"/>
       <url>2021/04/10/xiang-mu-shuo-ming/</url>
