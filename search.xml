@@ -4,6 +4,100 @@
   
     
     <entry>
+      <title>rabbitmq</title>
+      <link href="2021/04/12/rabbitmq/"/>
+      <url>2021/04/12/rabbitmq/</url>
+      
+        <content type="html"><![CDATA[<h2 id="rabbitMQ"><a href="#rabbitMQ" class="headerlink" title="rabbitMQ"></a>rabbitMQ</h2><p>功能:<br>解决多系统、异构系统间的数据交换问题，也可用于系统间服务的 相互调用。（RPC），rabbitMQ是AMQP（高级消息队列协议）的实现，服务端用erlang语言编写，支持多种客户端。 用于在分布式系统中存储转发消息，作为 消息中间件，主要用于组件之间的解耦，消息的发送者无需知道消息使用者的存在，反之亦然。</p><h2 id="主要接口"><a href="#主要接口" class="headerlink" title="主要接口"></a>主要接口</h2><p>Connection： 就是一个TCP的连接。connection封装了socket，用于socket连接。Producer和Consumer都是通过TCP连接到RabbitMQ Server的。以后我们可以看到，程序的起始处就是建立这个TCP连接。   Channels： 虚拟连接。它建立在上述的TCP连接中。数据流动都是在Channel中进行的。channel进行大部分的业务操作：定义queue，exchange，绑定，路由等。connectionFactory生成connection，</p><h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><p>Queue：存储消息producer：发布消息  ，consumer：处理消息，exchange：接受producer消息，将消息路由到一个或多个queue（或丢弃）。<br><img src="/2021/04/12/rabbitmq/1.png"><br>Queue与Consumer的消息传送过程：<br>情况一：正常<br>情况二：消费者在处理Queue消息时出现了宕机等故障，消息并未处理完，为了防止消息丢失，我们要求消费者处理完数据向RabbitMQ发送一个回执确认，然后rabbitMQ才从消息队列中移除该消息，若未收到回执且连接未断开，则继续等待，若没有收到且连接断开则将消息发送给其他消费者（如果有的话）。注意如果忘记发送回执则会造成queue中消息堆积，使消费者重复执行这些消息。生产者与消息服务之间的数据传送（持久化）：法一：事务，原子性法二：confirm机制Confirm机制的最大优点在于异步，生产者在发送消息以后，即可继续执行其他任务。而服务器返回Confirm后，会触发生产者的回调函数，生产者在回调函数中处理Confirm信息。如果消息服务器发生异常，导致该消息丢失，会返回给生产者一个nack，表示消息已经丢失，这样生产者就可以通过重发消息，保证消息不丢失。Confirm机制在性能上要比事务优越很多。但是Confirm机制，无法进行回滚，就是一旦服务器崩溃，生产者无法得到Confirm信息，生产者其实本身也不知道该消息吃否已经被持久化，只有继续重发来保证消息不丢失，但是如果原先已经持久化的消息，并不会被回滚，这样队列中就会存在两条相同的消息，系统需要支持去重。<br>负载均衡：rabbitmq的queue可以通过设置prefetchCount=1，使得queue每次给消费者仅发一个消息，处理完了再发下一个，这样就避免了消费者处理消息花费时间不同，而造成的有的忙有的空闲的现象。<br><img src="/2021/04/12/rabbitmq/2.png"><br>exchange Types的四种类型：<br>①，fanout：发送消息给所有与exchange绑定的queue。<br>②，direct：将消息路由到bindingkey和routeringkey完全匹配的queue，注意完全匹配。<br>③，topic：bindingkey和routeringkey模糊匹配的queue，注意模糊匹配，*匹配一个字符，#匹配多个字符。<br>④，headers：（不根据bindingkey与routeringkey，只根据exchange与queue间的指定键值对）在绑定Queue与Exchange时指定一组键值对；当消息发送到Exchange时，RabbitMQ会取到该消息的headers（也是一个键值对的形式），对比其中的键值对是否完全匹配Queue与Exchange绑定时指定的键值对；如果完全匹配则消息会路由到该Queue，否则不会路由到该Queue。<br><a href="https://www.cnblogs.com/williamjie/p/9481774.html" title="https://www.cnblogs.com/williamjie/p/9481774.html">https://www.cnblogs.com/williamjie/p/9481774.html</a><br><a href="https://blog.csdn.net/anzhsoft/article/details/19563091" title="https://blog.csdn.net/anzhsoft/article/details/19563091">https://blog.csdn.net/anzhsoft/article/details/19563091</a></p><h2 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h2><p>远程过程调用（远程方法调用，一个节点请求另一个节点提供的服务）<br><img src="/2021/04/12/rabbitmq/3.png"><br>超级详细讲解：（都demo代码）<br><a href="https://www.jianshu.com/p/7d6853140e13" title="https://www.jianshu.com/p/7d6853140e13">https://www.jianshu.com/p/7d6853140e13</a><br><img src="/2021/04/12/rabbitmq/4.png"><br>REST：REST通常以业务为导向，将业务对象上执行的操作映射到HTTP动词，格式非常简单，可以使用浏览器进行扩展和传输，通过JSON数据完成客户端和服务端之间的消息通信，直接支持请求/响应方式的通信。不需要中间的代理，简化了系统的架构，不同系统之间只需要对JSON进行解析和序列化即可完成数据的传递。gRPC： gRPC 是一种基于二进制流的消息协议，客户端和服务端使用HTTP/2以Protocol Buffer格式交换二进制消息。注册中心：（添加了一个映射表&lt;服务，服务地址&gt;进行解耦）当项目中有很多服务时，可以把所有的服务在启动的时候注册到一个注册中心里面，用于维护服务和服务器之间的列表，当注册中心接收到客户端请求时，去找到该服务是否远程可以调用，如果可以调用需要提供服务地址返回给客户端，客户端根据返回的地址和端口，去调用远程服务端的方法，执行完成之后将结果返回给客户端。这样在服务端加新功能的时候，客户端不需要直接感知服务端的方法，服务端将更新之后的结果在注册中心注册即可，而且当修改了服务端某些方法的时候，或者服务降级服务多机部署想实现负载均衡的时候，我们只需要更新注册中心的服务群即可。</p><h2 id="消息队列（解耦异步削峰）"><a href="#消息队列（解耦异步削峰）" class="headerlink" title="消息队列（解耦异步削峰）"></a>消息队列（解耦异步削峰）</h2><p>如何保证消息不被重复消费？<br>准备一个第三方介质,来做消费记录。以redis为例，给消息分配一个全局id，只要消费过该消息，将&lt;id,message&gt;以K-V形式写入redis。那消费者开始消费前，先去redis中查询有没消费记录即可。<br><a href="https://www.cnblogs.com/williamjie/p/9481780.html" title="https://www.cnblogs.com/williamjie/p/9481780.html">https://www.cnblogs.com/williamjie/p/9481780.html</a></p><h2 id="关系型数据库与非关系型数据库"><a href="#关系型数据库与非关系型数据库" class="headerlink" title="关系型数据库与非关系型数据库"></a>关系型数据库与非关系型数据库</h2><p>关系型：主键+非主键（通常）<br>非关系型：redis，mongdb（nosql即no relational）<br><a href="https://blog.csdn.net/williamchew/article/details/51951551" title="https://blog.csdn.net/williamchew/article/details/51951551">https://blog.csdn.net/williamchew/article/details/51951551</a></p><h2 id="rabbitMQ实例"><a href="#rabbitMQ实例" class="headerlink" title="rabbitMQ实例"></a>rabbitMQ实例</h2><p><a href="https://blog.csdn.net/limingcai168/article/details/84921060?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.control&dist_request_id=&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.control" title="https://blog.csdn.net/limingcai168/article/details/84921060?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.control&amp;dist_request_id=&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.control">https://blog.csdn.net/limingcai168/article/details/84921060?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.control&amp;dist_request_id=&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.control</a><br>应用场景：<a href="https://www.cnblogs.com/wanglijun/p/10896896.html" title="https://www.cnblogs.com/wanglijun/p/10896896.html">https://www.cnblogs.com/wanglijun/p/10896896.html</a><br>用户注册、订单处理、秒杀削峰<br>通过消息服务中间件的queue实现并发异步。</p><h2 id="rabbitMQ面试题"><a href="#rabbitMQ面试题" class="headerlink" title="rabbitMQ面试题"></a>rabbitMQ面试题</h2><p><a href="https://blog.csdn.net/ThinkWon/article/details/104588612?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161500078316780255298400%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=161500078316780255298400&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v29_name-2-104588612.pc_v2_rank_blog_default&utm_term=rabbitMQ" title="https://blog.csdn.net/ThinkWon/article/details/104588612?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161500078316780255298400%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&amp;request_id=161500078316780255298400&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v29_name-2-104588612.pc_v2_rank_blog_default&amp;utm_term=rabbitMQ">https://blog.csdn.net/ThinkWon/article/details/104588612?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161500078316780255298400%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&amp;request_id=161500078316780255298400&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2<del>blog</del>first_rank_v2~rank_v29_name-2-104588612.pc_v2_rank_blog_default&amp;utm_term=rabbitMQ</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>网络知识</title>
+      <link href="2021/04/12/wang-luo-zhi-shi/"/>
+      <url>2021/04/12/wang-luo-zhi-shi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Socket编程"><a href="#Socket编程" class="headerlink" title="Socket编程"></a>Socket编程</h2><p>语法说明：<br>socket(AF_INET, SOCK_STREAM)<br>AF_INET：面向网络的套接字；<br>SOCK_STREAM（tcp）：面向连接的套接字（字节流）；<br>SOCKET_DGRAM（udp）:无连接的套接字，面向报文段。<br>bind：为套接字绑定ip和端口<br>listen：服务器监听客户端请求。<br>connect（addr）：请求连接。<br>accept（接收客户端的连接，阻塞）<br>recv：接受数据<br>send（data.encode(‘utf-8’）;<br>close:关闭套接字<br>Tcp：<br>service：<br>创建套接字<br>绑定addr与端口号<br>listen监听连接请求<br>accept创建连接<br>收发recv、send<br>close</p><p>client：<br>创建套接字<br>发起连接请求<br>收发<br>close</p><p>UDP：<br>service：<br>建立套接字<br>bind<br>收发：recvfrom、sendto<br>close</p><p>client：<br>建立套接字<br>收发<br>close</p><h2 id="NETTY"><a href="#NETTY" class="headerlink" title="NETTY"></a>NETTY</h2><p>reactor线程模型：<br>单reactor单线程<br>单reactor多线程<br>主从reactor多线程<br><a href="https://www.jianshu.com/p/2965fca6bb8f" title="https://www.jianshu.com/p/2965fca6bb8f">https://www.jianshu.com/p/2965fca6bb8f</a></p><h2 id="tcp与udp的区别"><a href="#tcp与udp的区别" class="headerlink" title="tcp与udp的区别"></a>tcp与udp的区别</h2><p><img src="/2021/04/12/wang-luo-zhi-shi/1.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络 </tag>
+            
+            <tag> socket </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>java算法基础</title>
+      <link href="2021/04/12/java-suan-fa-ji-chu/"/>
+      <url>2021/04/12/java-suan-fa-ji-chu/</url>
+      
+        <content type="html"><![CDATA[<h2 id="map"><a href="#map" class="headerlink" title="map"></a>map</h2><p>hashMap、LinkedHashMap（Node链式连接）：LRU<br>常用方法：<br><img src="/2021/04/12/java-suan-fa-ji-chu/1.ong"><br>map的key转set：<br>Iterator it = map.keySet().iterator();<br>注：iterator.next（）才是第一个值。</p><h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><p>String与int：<br>i+””或者<br>String.Valueof(i);int-&gt;String;<br>Integer.valueOf(str).intValue() 或者Integer.parseInt(str):String-&gt;int;<br>注：Integer.valueOf(str):对象转对象</p><h2 id="queue"><a href="#queue" class="headerlink" title="queue"></a>queue</h2><p><img src="/2021/04/12/java-suan-fa-ji-chu/2.ong"></p><h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><p><a href="https://www.cnblogs.com/xiaostudy/p/9503199.html" title="https://www.cnblogs.com/xiaostudy/p/9503199.html">https://www.cnblogs.com/xiaostudy/p/9503199.html</a><br>add、addall、get、indexof、Listiterator、set、remove、subList、contains</p><h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><p><img src="/2021/04/12/java-suan-fa-ji-chu/3.ong"></p><h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><p><a href="https://www.cnblogs.com/hey-man/p/6833242.html" title="https://www.cnblogs.com/hey-man/p/6833242.html">https://www.cnblogs.com/hey-man/p/6833242.html</a><br>length（）、charAt、contains、indexof；<br>转char数组：str.toCharArray();</p><h2 id="queue-1"><a href="#queue-1" class="headerlink" title="queue"></a>queue</h2><p>Queue<TreeNode> q=new LinkedList&lt;&gt;();</TreeNode></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Spring总结2</title>
+      <link href="2021/04/12/spring-zong-jie-2/"/>
+      <url>2021/04/12/spring-zong-jie-2/</url>
+      
+        <content type="html"><![CDATA[<h2 id="SpringMVC运行流程"><a href="#SpringMVC运行流程" class="headerlink" title="SpringMVC运行流程"></a>SpringMVC运行流程</h2><p><a href="https://blog.csdn.net/q982151756/article/details/79718008" title="https://blog.csdn.net/q982151756/article/details/79718008">https://blog.csdn.net/q982151756/article/details/79718008</a></p><h2 id="ioc：控制反转或依赖注入"><a href="#ioc：控制反转或依赖注入" class="headerlink" title="ioc：控制反转或依赖注入"></a>ioc：控制反转或依赖注入</h2><p>对象类通过封装以后，内部实现对外部是透明的，从而降低了解决问题的复杂度，而且可以灵活地被重用和扩展。当对象A运行到需要对象B的时候，IOC容器会主动创建一个对象B注入到对象A需要的地方。<br>“获得依赖对象的过程被反转了”， 。控制被反转之后，获得依赖对象的过程由自身管理变为了由IOC容器主动注入。于是，他给“控制反转”取了一个更合适的名字叫做“依赖注入（Dependency Injection）”。</p><h2 id="aop：面向切面编程"><a href="#aop：面向切面编程" class="headerlink" title="aop：面向切面编程"></a>aop：面向切面编程</h2><p><a href="https://blog.csdn.net/q982151756/article/details/80513340" title="https://blog.csdn.net/q982151756/article/details/80513340">https://blog.csdn.net/q982151756/article/details/80513340</a></p><h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><p><img src="/2021/04/12/spring-zong-jie-2/1.png"><br><a href="https://blog.csdn.net/e286878553/article/details/80349173" title="https://blog.csdn.net/e286878553/article/details/80349173">https://blog.csdn.net/e286878553/article/details/80349173</a><br>forname()：获取运行时的类。<br>Class.forName() 加载了指定类后，若类中有静态初始化器，JVM必然会执行该类的静态代码段，而JDBC的Driver类都是会有static代码块  。<br>注：每一个class文件再被jvm的类加载器加载后，得会生成一个包含该类 所有属性和方法的class类，因此可以被获取并调用，我们通过这个class类实现<br>动态获取的信息以及动态调用对象的方法的功能。<br>反射就是对类进行解剖， 根据给出的类名（字符串方式）来动态地生成对象。</p><h2 id="hashcode与equals"><a href="#hashcode与equals" class="headerlink" title="hashcode与equals"></a>hashcode与equals</h2><p>hashcode同，在equals同，才说明string相等。<br>equals与hashcode通常都需要重写，equals同hashcode必同，反之不一定。<br>hashcode通过散列函数得到一个值，而不是得到一个散列表的地址。equals在非string数据类型（int float double）里与==一样，都是比较地址，而在string是比较地址所在存储单元的内容。</p><h2 id="string-stringbuffer-stringbuilder"><a href="#string-stringbuffer-stringbuilder" class="headerlink" title="string stringbuffer stringbuilder"></a>string stringbuffer stringbuilder</h2><p><img src="/2021/04/12/spring-zong-jie-2/2.png"><br>string字符串常量：new与直接定义的区别，new是堆中开辟新地址，=是在常量池中寻找相等的拘留字符串的引用。<br><img src="/2021/04/12/spring-zong-jie-2/6.png"><br>10，jvm jre jdk ide</p><h2 id="java中的构造函数"><a href="#java中的构造函数" class="headerlink" title="java中的构造函数"></a>java中的构造函数</h2><p><a href="https://blog.csdn.net/sdjadycsdn/article/details/81559475">https://blog.csdn.net/sdjadycsdn/article/details/81559475</a><br>有参 无参 调用顺序：基类构造函数-&gt;对象类的构造函数-&gt;本类的构造函数</p><h2 id="jdk动态代理与cglib动态代理"><a href="#jdk动态代理与cglib动态代理" class="headerlink" title="jdk动态代理与cglib动态代理"></a>jdk动态代理与cglib动态代理</h2><p>实现innovationHandler接口（invoke），利用Proxy类生成代理，调用invoke函数，利用反射完成。<br>实例：<a href="https://www.jianshu.com/p/7d6853140e13" title="https://www.jianshu.com/p/7d6853140e13">https://www.jianshu.com/p/7d6853140e13</a><br><a href="https://www.cnblogs.com/opendragonhuang/p/11225026.html" title="https://www.cnblogs.com/opendragonhuang/p/11225026.html">https://www.cnblogs.com/opendragonhuang/p/11225026.html</a><br><a href="https://blog.csdn.net/jiankunking/article/details/52143504" title="https://blog.csdn.net/jiankunking/article/details/52143504">https://blog.csdn.net/jiankunking/article/details/52143504</a><br>关键：动态代理类与处理器handler<br><img src="/2021/04/12/spring-zong-jie-2/3.png"><br><img src="/2021/04/12/spring-zong-jie-2/4.png"></p><h2 id="java对象的序列化与反序列化"><a href="#java对象的序列化与反序列化" class="headerlink" title="java对象的序列化与反序列化"></a>java对象的序列化与反序列化</h2><p>远程传输：序列化<br><img src="/2021/04/12/spring-zong-jie-2/7.png"><br><img src="/2021/04/12/spring-zong-jie-2/5.png"></p><p>jvm停止后，java对象仍能够存在，保存在硬盘实现持久化。</p><h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><p>error exception<br>常见异常：<br>算术异常 ，空指针异常，堆栈溢出异常，数组越界异常，内存不足异常</p><h2 id="synchronized与lock的区别"><a href="#synchronized与lock的区别" class="headerlink" title="synchronized与lock的区别"></a>synchronized与lock的区别</h2><p>synchronized是jvm的一个关键字，由jvm来进行锁的释放，当多个线程请求synchronized修饰的资源时，只能有一个获得锁，没有获得锁的线程将阻塞等待，他不响应中断，是非公平锁。<br>lock是一个接口，必须有finally进行释放，不然容易造成线程死锁。<br>lock可以尝试获得锁，不用一直等待。<br>响应中断，是公平锁。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> work </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> work </tag>
+            
+            <tag> 面经 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JVM和容器类</title>
       <link href="2021/04/10/jvm-he-rong-qi-lei/"/>
       <url>2021/04/10/jvm-he-rong-qi-lei/</url>
