@@ -4,6 +4,195 @@
   
     
     <entry>
+      <title>ubuntu安装与配置</title>
+      <link href="2021/04/12/ubuntu-an-zhuang-yu-pei-zhi/"/>
+      <url>2021/04/12/ubuntu-an-zhuang-yu-pei-zhi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Ubuntu-16-04-安装"><a href="#Ubuntu-16-04-安装" class="headerlink" title="Ubuntu 16.04 安装"></a>Ubuntu 16.04 安装</h2><p><a href="https://blog.csdn.net/kellyroslyn/article/details/91607520" title="https://blog.csdn.net/kellyroslyn/article/details/91607520">https://blog.csdn.net/kellyroslyn/article/details/91607520</a></p><h2 id="界面显示不全"><a href="#界面显示不全" class="headerlink" title="界面显示不全"></a>界面显示不全</h2><p>左手按住alt键右手鼠标往上拖动安装界面，即可显示完全内容</p><h2 id="vmware-Tools-安装"><a href="#vmware-Tools-安装" class="headerlink" title="vmware Tools 安装"></a>vmware Tools 安装</h2><p><a href="https://blog.csdn.net/weixin_37182342/article/details/80236632?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task" title="https://blog.csdn.net/weixin_37182342/article/details/80236632?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task">https://blog.csdn.net/weixin_37182342/article/details/80236632?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task</a></p><h2 id="桥接模式设置，解决连不上网的问题"><a href="#桥接模式设置，解决连不上网的问题" class="headerlink" title="桥接模式设置，解决连不上网的问题"></a>桥接模式设置，解决连不上网的问题</h2><p><a href="https://blog.csdn.net/Mr_jianfeng/article/details/81053849/" title="https://blog.csdn.net/Mr_jianfeng/article/details/81053849/">https://blog.csdn.net/Mr_jianfeng/article/details/81053849/</a></p><h2 id="安装谷歌中文输入法："><a href="#安装谷歌中文输入法：" class="headerlink" title="安装谷歌中文输入法："></a>安装谷歌中文输入法：</h2><p><a href="https://blog.csdn.net/lybhit/article/details/78663731" title="https://blog.csdn.net/lybhit/article/details/78663731">https://blog.csdn.net/lybhit/article/details/78663731</a><br><a href="https://blog.csdn.net/jsjwr/article/details/78800202" title="https://blog.csdn.net/jsjwr/article/details/78800202">https://blog.csdn.net/jsjwr/article/details/78800202</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> ubuntu </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ubuntu </tag>
+            
+            <tag> 虚拟机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python之getpost</title>
+      <link href="2021/04/12/python-zhi-getpost/"/>
+      <url>2021/04/12/python-zhi-getpost/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1，get-post"><a href="#1，get-post" class="headerlink" title="1，get/post"></a>1，get/post</h2><h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><pre class=" language-bash"><code class="language-bash">response <span class="token operator">=</span> requests.get<span class="token punctuation">(</span><span class="token string">'http://httpbin.org/get'</span><span class="token punctuation">)</span>print<span class="token punctuation">(</span>response.text<span class="token punctuation">)</span></code></pre><h3 id="post"><a href="#post" class="headerlink" title="post"></a>post</h3><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#通过在发送post请求时添加一个data参数，这个data参数可以通过字典构造成</span><span class="token function">import</span> requestsdata <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>    <span class="token string">"name"</span><span class="token keyword">:</span><span class="token string">"zhaofan"</span>,    <span class="token string">"age"</span>:23<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>response <span class="token operator">=</span> requests.post<span class="token punctuation">(</span><span class="token string">"http://httpbin.org/post"</span>,data<span class="token operator">=</span>data<span class="token punctuation">)</span>print<span class="token punctuation">(</span>response.text<span class="token punctuation">)</span></code></pre><h2 id="2-text与content"><a href="#2-text与content" class="headerlink" title="2,text与content"></a>2,text与content</h2><p>文本，可以通过r.text。–unicode<br>图片，文件，则可以通过r.content。–bites</p><h2 id="3-json与字典"><a href="#3-json与字典" class="headerlink" title="3,json与字典"></a>3,json与字典</h2><p>python dict 字符串用单引号，json强制规定双引号。<br>.json key name 必须是字符串, python 是hashable,<br>（resp.json()返回的是json格式数据）<br>json 模块提供了一种很简单的方式来编码和解码JSON数据。 其中两个主要的函数是 json.dumps() 和 json.loads() ， 要比其他序列化函数库如pickle的接口少得多。 下面演示如何将一个Python数据结构转换为JSON：</p><pre class=" language-bash"><code class="language-bash"><span class="token function">import</span> jsondata <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>    <span class="token string">'name'</span> <span class="token keyword">:</span> <span class="token string">'ACME'</span>,    <span class="token string">'shares'</span> <span class="token keyword">:</span> 100,    <span class="token string">'price'</span> <span class="token keyword">:</span> 542.23<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>json_str <span class="token operator">=</span> json.dumps<span class="token punctuation">(</span>data<span class="token punctuation">)</span>JSON编码的字符串转换回一个Python数据结构：data <span class="token operator">=</span> json.loads<span class="token punctuation">(</span>json_str<span class="token punctuation">)</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> get </tag>
+            
+            <tag> post </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python之os</title>
+      <link href="2021/04/12/python-zhi-os/"/>
+      <url>2021/04/12/python-zhi-os/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/yufeihlf/p/6179547.html" title="https://www.cnblogs.com/yufeihlf/p/6179547.html">https://www.cnblogs.com/yufeihlf/p/6179547.html</a><br>os.chdir() 方法用于改变当前工作目录到指定的路径。<br>os.getcwd()：查看当前所在路径。<br>os.listdir(path):列举目录下的所有文件。<strong>返回的是列表类型</strong>。<br>os.path.abspath(path):返回path的绝对路径。<br>os.path.split(path):将路径分解为(文件夹,文件名)，<strong>返回的是元组类型</strong>。可以看出，若路径字符串最后一个字符是,则只有文件夹部分有值；若路径字符串中均无,则只有文件名部分有值。若路径字符串有\，且不在最后，则文件夹和文件名均有值。且返回的文件夹的结果不包含.</p><pre class=" language-bash"><code class="language-bash">os.path.split<span class="token punctuation">(</span><span class="token string">'D:\\pythontest\\ostest\\Hello.py'</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token string">'D:\\pythontest\\ostest'</span>, <span class="token string">'Hello.py'</span><span class="token punctuation">)</span></code></pre><p>os.path.dirname(path):返回path中的文件夹部分，结果不包含’&#39;</p><pre class=" language-bash"><code class="language-bash">os.path.dirname<span class="token punctuation">(</span><span class="token string">'D:\\pythontest\\ostest\\hello.py'</span><span class="token punctuation">)</span><span class="token string">'D:\\pythontest\\ostest'</span></code></pre><p>os.path.basename(path):返回path中的文件名。</p><pre class=" language-bash"><code class="language-bash">os.path.basename<span class="token punctuation">(</span><span class="token string">'D:\\pythontest\\ostest\\hello.py'</span><span class="token punctuation">)</span><span class="token string">'hello.py'</span></code></pre><p>os.path.exists(path):文件或文件夹是否存在，返回True 或 False。<br>os.makedirs(path+name)：建立文件夹</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> os </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python之beatifulsoup解析文件</title>
+      <link href="2021/04/12/python-zhi-beatifulsoup-jie-xi-wen-jian/"/>
+      <url>2021/04/12/python-zhi-beatifulsoup-jie-xi-wen-jian/</url>
+      
+        <content type="html"><![CDATA[<pre class=" language-bash"><code class="language-bash"><span class="token function">import</span> requests<span class="token function">import</span> refrom bs4 <span class="token function">import</span> BeautifulSoupurl<span class="token operator">=</span><span class="token string">'http://www.cntour.cn/'</span>strhtml<span class="token operator">=</span>requests.get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>soup<span class="token operator">=</span>BeautifulSoup<span class="token punctuation">(</span>strhtml.text,<span class="token string">'lxml'</span><span class="token punctuation">)</span>data<span class="token operator">=</span>soup.select<span class="token punctuation">(</span><span class="token string">'#main>div>div.mtop.firstMod.clearfix>div.centerBox>ul.newsList>li>a'</span><span class="token punctuation">)</span>#检查-<span class="token operator">></span>选择代码区域-<span class="token operator">></span>copy-<span class="token operator">></span>selector-<span class="token operator">></span>ok<span class="token comment" spellcheck="true">#print(data)</span><span class="token keyword">for</span> item <span class="token keyword">in</span> data:result<span class="token operator">=</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span><span class="token string">'title'</span>:item.get_text<span class="token punctuation">(</span><span class="token punctuation">)</span>,<span class="token comment" spellcheck="true">#文本</span><span class="token string">'link'</span>:item.get<span class="token punctuation">(</span><span class="token string">'href'</span><span class="token punctuation">)</span>,<span class="token comment" spellcheck="true">#元素</span><span class="token string">'ID'</span>:re.findall<span class="token punctuation">(</span><span class="token string">'\d+'</span>,item.get<span class="token punctuation">(</span><span class="token string">'href'</span><span class="token punctuation">))</span><span class="token comment" spellcheck="true">#元素部分内容</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span><span class="token string">''</span><span class="token string">'for i in result:print(i)'</span><span class="token string">''</span>print<span class="token punctuation">(</span>result<span class="token punctuation">)</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> beautifulsoup </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python之之_init_调用</title>
+      <link href="2021/04/12/python-zhi-zhi-init-diao-yong/"/>
+      <url>2021/04/12/python-zhi-zhi-init-diao-yong/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1，init-初始化文件"><a href="#1，init-初始化文件" class="headerlink" title="1，init(初始化文件)"></a>1，<strong>init</strong>(初始化文件)</h2><p><a href="https://www.cnblogs.com/tp1226/p/8453854.html">https://www.cnblogs.com/tp1226/p/8453854.html</a><br><strong>init</strong>.py 在包被导入时会被执行。<br>from mypackage import *：导入mypackage的所有文件<br><strong>all</strong> 关联了一个模块列表，当执行 from xx import * 时，就会只导入列表中的模块。</p><h2 id="2-调用（form-import-从-中引入他的下一级对象）"><a href="#2-调用（form-import-从-中引入他的下一级对象）" class="headerlink" title="2,调用（form .. import ..:从..中引入他的下一级对象）"></a>2,调用（form .. import ..:从..中引入他的下一级对象）</h2><p>from qunar import table<br>从qunar.py中引入table对象。<br>from mypackage import subpackage_1<br>从mypackage文件包中引入子包subpackage_1<br>from bs4 import BeatifulSoup<br>从bs4库中导入BeatifulSoup</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> init </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>mongodb</title>
+      <link href="2021/04/12/mongodb/"/>
+      <url>2021/04/12/mongodb/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1，打开mongodb"><a href="#1，打开mongodb" class="headerlink" title="1，打开mongodb"></a>1，打开mongodb</h2><p>cd C:\Program Files\MongoDB\Server\3.4\bin<br>mongod –dbpath C:\data\db<br>另开命令窗口<br>cd C:\Program Files\MongoDB\Server\3.4\bin<br>mongo</p><blockquote></blockquote><h2 id="2-实现连接并创建数据库，数据表"><a href="#2-实现连接并创建数据库，数据表" class="headerlink" title="2,实现连接并创建数据库，数据表"></a>2,实现连接并创建数据库，数据表</h2><pre class=" language-bash"><code class="language-bash"><span class="token function">import</span> pymongoclient<span class="token operator">=</span>pymongo.MongoClient<span class="token punctuation">(</span><span class="token string">'localhost'</span>,27017<span class="token punctuation">)</span><span class="token comment" spellcheck="true">#ip:port</span>database<span class="token operator">=</span>client<span class="token punctuation">[</span><span class="token string">'weather'</span><span class="token punctuation">]</span><span class="token comment" spellcheck="true">#数据库名字</span>table<span class="token operator">=</span>book_weather<span class="token punctuation">[</span><span class="token string">'sheet_weather_3'</span><span class="token punctuation">]</span><span class="token comment" spellcheck="true">#数据表</span></code></pre><h2 id="3，基础操作"><a href="#3，基础操作" class="headerlink" title="3，基础操作"></a>3，基础操作</h2><h3 id="1，查找"><a href="#1，查找" class="headerlink" title="1，查找"></a>1，查找</h3><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># (>) 大于 - $gt</span><span class="token comment" spellcheck="true"># (&lt;) 小于 - $lt</span><span class="token comment" spellcheck="true"># (>=) 大于等于 - $gte</span><span class="token comment" spellcheck="true"># (&lt;= ) 小于等于 - $lte</span><span class="token comment" spellcheck="true">#例：查询集合中age大于25的所有记录</span><span class="token keyword">for</span> i <span class="token keyword">in</span> my_set.find<span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;"age":&amp;#123;"$gt":25&amp;#125;&amp;#125;):</span>print<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token comment" spellcheck="true">#找出age是20、30、35的数据</span><span class="token keyword">for</span> i <span class="token keyword">in</span> my_set.find<span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;"age":&amp;#123;"$in":(20,30,35)&amp;#125;&amp;#125;):</span>print<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token comment" spellcheck="true">#找出age是20或35的记录for i in my_set.find(&amp;#123;"$or":[&amp;#123;"age":20&amp;#125;,&amp;#123;"age":35&amp;#125;]&amp;#125;):</span>print<span class="token punctuation">(</span>i<span class="token punctuation">)</span></code></pre><h3 id="2-插入（字典的形式）"><a href="#2-插入（字典的形式）" class="headerlink" title="2,插入（字典的形式）"></a>2,插入（字典的形式）</h3><pre class=" language-bash"><code class="language-bash">dic <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;"name":"zhangsan",</span><span class="token string">"age"</span>:18,<span class="token string">"contact"</span> <span class="token keyword">:</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span><span class="token string">"email"</span> <span class="token keyword">:</span> <span class="token string">"1234567@qq.com"</span>,<span class="token string">"iphone"</span> <span class="token keyword">:</span> <span class="token string">"11223344"</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>my_set.insert<span class="token punctuation">(</span>dic<span class="token punctuation">)</span></code></pre><h3 id="3，update"><a href="#3，update" class="headerlink" title="3，update"></a>3，update</h3><p>#多级路径下修改操作</p><pre class=" language-bash"><code class="language-bash">result <span class="token operator">=</span> my_set.update<span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;"contact.iphone":"11223344"&amp;#125;,&amp;#123;"$set":&amp;#123;"contact.email":"9999999@qq.com"&amp;#125;&amp;#125;)#查询条件+操作符+（路径下的值：改后的值）</span>result1 <span class="token operator">=</span> my_set.find_one<span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;"contact.iphone":"11223344"&amp;#125;)</span>print<span class="token punctuation">(</span>result1<span class="token punctuation">[</span><span class="token string">"contact"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">"email"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#输出：9999999@qq.com</span></code></pre><pre class=" language-bash"><code class="language-bash">table.update_one<span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;'_id':item['_id']&amp;#125;,&amp;#123;'$set':&amp;#123;'HeWeather6.0.daily_forecast.&amp;#123;&amp;#125;.tmp_min'.format(i):int(temp)&amp;#125;&amp;#125;)#查询条件+操作符+（路径下的值：改后的值）</span><span class="token keyword">for</span> item <span class="token keyword">in</span> table.find<span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;'HeWeather6.daily_forecast.tmp_min':&amp;#123;'$gt':20&amp;#125;&amp;#125;): #find(路径下的值，条件)</span>print<span class="token punctuation">(</span>item<span class="token punctuation">[</span><span class="token string">'HeWeather6'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'basic'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'location'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#字典的键中键对应的值</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> mongodb </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python_pool_map_lambda_open</title>
+      <link href="2021/04/12/python-pool-map-lambda-open/"/>
+      <url>2021/04/12/python-pool-map-lambda-open/</url>
+      
+        <content type="html"><![CDATA[<h2 id="lambda（简单的函数）"><a href="#lambda（简单的函数）" class="headerlink" title="lambda（简单的函数）"></a>lambda（简单的函数）</h2><p>L<a href="%E4%BC%A0%E5%85%A5%E7%9A%84%E5%80%BC">键</a>： 跳转表（jump table）行为的列表或者字典</p><pre class=" language-bash"><code class="language-bash">L <span class="token operator">=</span> <span class="token punctuation">[</span>lambda x: x+2, lambda x: x*2, lambda x: x**2<span class="token punctuation">]</span>print <span class="token string">"L="</span>, L<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">(</span>1<span class="token punctuation">)</span>, L<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">(</span>2<span class="token punctuation">)</span>, L<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">(</span>3<span class="token punctuation">)</span>-<span class="token comment" spellcheck="true">#L = 3 4 9</span>D <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;"d1": lambda x: x**1, "d2": lambda x: x**2, "d3": lambda x: x**3 &amp;#125;</span>print <span class="token string">"D="</span>, D<span class="token punctuation">[</span><span class="token string">"d1"</span><span class="token punctuation">]</span><span class="token punctuation">(</span>2<span class="token punctuation">)</span>, D<span class="token punctuation">[</span><span class="token string">"d2"</span><span class="token punctuation">]</span><span class="token punctuation">(</span>2<span class="token punctuation">)</span>, D<span class="token punctuation">[</span><span class="token string">"d3"</span><span class="token punctuation">]</span><span class="token punctuation">(</span>2<span class="token punctuation">)</span>-<span class="token comment" spellcheck="true"># D= 2 4 8</span></code></pre><h2 id="与map函数的比较：一一映射传值"><a href="#与map函数的比较：一一映射传值" class="headerlink" title="与map函数的比较：一一映射传值"></a>与map函数的比较：一一映射传值</h2><pre class=" language-bash"><code class="language-bash">def inc<span class="token punctuation">(</span>x<span class="token punctuation">)</span>:<span class="token keyword">return</span> x + 10l <span class="token operator">=</span> <span class="token punctuation">[</span>1, 2, 3<span class="token punctuation">]</span>print map<span class="token punctuation">(</span>inc, l<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#直接函数名</span>print map<span class="token punctuation">(</span>lambda x: x+10, l<span class="token punctuation">)</span>-<span class="token comment" spellcheck="true">#[11, 12, 13]</span>-<span class="token comment" spellcheck="true">#[11, 12, 13] </span></code></pre><h2 id="Pool（多线程函数）"><a href="#Pool（多线程函数）" class="headerlink" title="Pool（多线程函数）"></a>Pool（多线程函数）</h2><p>pool=Pool()#初始化多进程<br>pool.map(get_all_data,dep_list.split())#将第二个参数映射到第一个参数</p><h2 id="map（映射）"><a href="#map（映射）" class="headerlink" title="map（映射）"></a>map（映射）</h2><p>map()是 Python 内置的高阶函数，它接收一个函数 f 和一个 list，并通过把函数 f 依次作用在 list 的每个元素上，得到一个新的 list 并返回。<br>python3中可以处理类表长度不一致的情况，但无法处理类型不一致的情况，</p><pre class=" language-bash"><code class="language-bash">l4<span class="token operator">=</span>map<span class="token punctuation">(</span>lambda x,y:x+y,<span class="token punctuation">[</span>1,2,3<span class="token punctuation">]</span>,<span class="token punctuation">[</span>1,2<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token keyword">for</span> i <span class="token keyword">in</span> l4:print<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token comment" spellcheck="true">#2 4 l4=map(lambda x,y:(x**y,x+y),[1,2,3],[1,2,'a'])for i in l4:print(i)</span>-<span class="token comment" spellcheck="true">#不支持错误</span>输入：<span class="token punctuation">[</span><span class="token string">'adam'</span>, <span class="token string">'LISA'</span>, <span class="token string">'barT'</span><span class="token punctuation">]</span>输出：<span class="token punctuation">[</span><span class="token string">'Adam'</span>, <span class="token string">'Lisa'</span>, <span class="token string">'Bart'</span><span class="token punctuation">]</span>l4<span class="token operator">=</span>map<span class="token punctuation">(</span>lambda x,y:<span class="token punctuation">(</span>x**y,x+y<span class="token punctuation">)</span>,<span class="token punctuation">[</span>1,2,3<span class="token punctuation">]</span>,<span class="token punctuation">[</span>1,2<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token keyword">for</span> i <span class="token keyword">in</span> l4:print<span class="token punctuation">(</span>i<span class="token punctuation">)</span>def format_name<span class="token punctuation">(</span>s<span class="token punctuation">)</span>:s1 <span class="token operator">=</span> s<span class="token punctuation">[</span>0:1<span class="token punctuation">]</span>.upper<span class="token punctuation">(</span><span class="token punctuation">)</span> + s<span class="token punctuation">[</span>1:<span class="token punctuation">]</span>.lower<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">return</span> s1print <span class="token punctuation">(</span>list<span class="token punctuation">(</span>map<span class="token punctuation">(</span>format_name, <span class="token punctuation">[</span><span class="token string">'adam'</span>, <span class="token string">'LISA'</span>, <span class="token string">'barT'</span><span class="token punctuation">]</span><span class="token punctuation">))</span><span class="token punctuation">)</span></code></pre><h2 id="open：读写文件"><a href="#open：读写文件" class="headerlink" title="open：读写文件"></a>open：读写文件</h2><p>1，#open(filepath , ‘mode’)<br>file = open(‘D:\test\test.txt’，‘w’)   #存在问题见FAQ1<br>一般常用模式：r(只读)、w(只写)、a(追加)、b(二进制)<br>组合：r+(读写)、w+(读写)<br>2、读写文件（r）： read()         readline()           readlines() write（）</p><pre class=" language-bash"><code class="language-bash"><span class="token function">file</span> <span class="token operator">=</span> open<span class="token punctuation">(</span><span class="token string">'D/test/test.txt'</span>,<span class="token string">'r'</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">#只读模式打开file</span>all_txt <span class="token operator">=</span> file.read<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#读全部</span>one_line_txt <span class="token operator">=</span> file.readline<span class="token punctuation">(</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">#读一行</span>all_line_txt <span class="token operator">=</span> file.readlines<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#读所有行</span>200_byte <span class="token operator">=</span> file.read<span class="token punctuation">(</span>200<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#读固定字节文件</span>list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'1111'</span>,<span class="token string">'22222'</span>,<span class="token string">'33333'</span><span class="token punctuation">]</span>input_lines <span class="token operator">=</span> file.writelines<span class="token punctuation">(</span>list<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#写入的参数放入一个列表中，写多行</span>文件关闭：f.close<span class="token punctuation">(</span><span class="token punctuation">)</span> </code></pre><h2 id="with-open-write-path-mode-as-f"><a href="#with-open-write-path-mode-as-f" class="headerlink" title="with open write(path,mode) as f:"></a>with open write(path,mode) as f:</h2><pre class=" language-bash"><code class="language-bash">    with      open<span class="token punctuation">(</span><span class="token string">'../dataconfig/test.json'</span>,encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>     as f1,     open<span class="token punctuation">(</span><span class="token string">'../dataconfig/test1.json'</span>,encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>     as f2,      open<span class="token punctuation">(</span><span class="token string">'../dataconfig/test2.json'</span>,encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>     as f3:    <span class="token keyword">for</span> i <span class="token keyword">in</span> f1:       j <span class="token operator">=</span> f2.readline<span class="token punctuation">(</span><span class="token punctuation">)</span>       k <span class="token operator">=</span> f3.readline<span class="token punctuation">(</span><span class="token punctuation">)</span>       print<span class="token punctuation">(</span>i.strip<span class="token punctuation">(</span><span class="token punctuation">)</span>,j.strip<span class="token punctuation">(</span><span class="token punctuation">)</span>,k.strip<span class="token punctuation">(</span><span class="token punctuation">))</span>  </code></pre><h2 id="strip"><a href="#strip" class="headerlink" title="strip()"></a>strip()</h2><p>该函数的作用是去除字符串开头和结尾处指定的字符，不会去除字符串中间对应的字符；<br>调用该函数时，可设置传入参数或者不设置参数<br>若不传入字符，则默认去除字符串开头和结尾的空格或换行字符；<br>若传入字符，则会依据传入的字符来进行去除操作；</p><h2 id="python之绝对路径与相对路径"><a href="#python之绝对路径与相对路径" class="headerlink" title="python之绝对路径与相对路径"></a>python之绝对路径与相对路径</h2><pre class=" language-bash"><code class="language-bash">    1. open<span class="token punctuation">(</span><span class="token string">'aaa.txt'</span><span class="token punctuation">)</span>      2. open<span class="token punctuation">(</span><span class="token string">'/data/bbb.txt'</span><span class="token punctuation">)</span>      3. open<span class="token punctuation">(</span><span class="token string">'D:\\user\\ccc.txt'</span><span class="token punctuation">)</span>  </code></pre><p>这三种表达式里面，前两个都是相对路径，第三个则是绝对路径。<br>相对路径必须是当前文件夹A里的文件a或者A里的文件夹B里的文件才可以open。<br>我们常用’/‘来表示相对路径，’\‘来表示绝对路径，上面的路径里\是转义的意思（3也可以写成open(r’D:\user\ccc.txt’)，r表示转义）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>rabbitmq</title>
       <link href="2021/04/12/rabbitmq/"/>
       <url>2021/04/12/rabbitmq/</url>
